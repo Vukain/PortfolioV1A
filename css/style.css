@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
     --semiColor1: #21ced1;
     --semiColor2: #7ccd59;
     --semiColor3: #4fcd94;
-    background-color: var(--backdarker)
+    background-color: var(--backdarker);
 }
 
 /* font-family: 'Ubuntu', sans-serif; */
@@ -51,7 +52,6 @@ header img.logo {
 header div.welcome {
     left: 12%;
     bottom: 34%;
-    font-family: 'Ubuntu', sans-serif;
     color: white;
     font-size: 80px;
     font-weight: bold;
@@ -138,7 +138,6 @@ header h2 {
 
 .portfolio .about {
     color: white;
-    font-family: 'Ubuntu', sans-serif;
     font-weight: normal;
     padding: 10px 20px 20px 0px;
     text-align: left;
@@ -197,13 +196,13 @@ section {
 }
 
 .skill h1 {
-    font-family: 'Ubuntu', sans-serif;
+
     font-size: 26px;
     margin-bottom: 15px;
 }
 
 .skill h2 {
-    font-family: 'Ubuntu', sans-serif;
+
     font-size: 26px;
     text-transform: uppercase;
     margin-top: 20px;
@@ -211,7 +210,7 @@ section {
 }
 
 .skill p {
-    font-family: 'Ubuntu', sans-serif;
+
     font-size: 16px;
     font-weight: 300;
     margin: 20px 20px;
@@ -245,14 +244,13 @@ section {
 }
 
 .about_me h1 {
-    font-family: 'Ubuntu', sans-serif;
+
     font-size: 26px;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
 .about_me p {
-    font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
 }
 
@@ -268,7 +266,7 @@ section {
 } */
 
 .contact h1 {
-    font-family: 'Ubuntu', sans-serif;
+
     font-size: 26px;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -286,7 +284,7 @@ section {
 .contact textarea {
     width: 100%;
     margin-bottom: 25px;
-    font-family: 'Ubuntu', sans-serif;
+
     height: 40px;
     padding: 5px;
     background-color: var(--backlighter);
@@ -353,7 +351,7 @@ section {
 footer {
     background-image: linear-gradient(-45deg, #9acd32, #0eceeb);
     color: white;
-    font-family: 'Ubuntu', sans-serif;
+
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
@@ -363,7 +361,7 @@ footer {
 /* extras */
 
 section .section_name {
-    font-family: 'Ubuntu', sans-serif;
+
     color: white;
     font-size: 60px;
     text-transform: uppercase;
