@@ -357,6 +357,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
+    max-width: 1920px;
 }
 
 /* extras */
