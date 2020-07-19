@@ -363,6 +363,7 @@ footer {
 /* extras */
 
 section .section_name {
+    font-family: 'Ubuntu', sans-serif;
     color: white;
     font-size: 60px;
     text-transform: uppercase;
