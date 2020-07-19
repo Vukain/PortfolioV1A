@@ -5,6 +5,7 @@
 }
 
 body {
+    overflow-x: hidden;
     --backdarker: #414140;
     --backlighter: #b0b0b0;
     --mainColor1: #9acd32;
