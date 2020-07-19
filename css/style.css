@@ -294,11 +294,25 @@ section {
 .contact input {
     font-size: 12px;
     border: 2px solid var(--semiColor1);
+    transition: .2s;
+}
+
+.contact input:focus {
+    border-radius: 10px;
+    outline: none;
+    border: 4px solid var(--semiColor2);
 }
 
 .contact textarea {
     height: 120px;
-    border: 2px solid var(--semiColor2);
+    border: 2px solid var(--semiColor1);
+    transition: .2s;
+}
+
+.contact textarea:focus {
+    border-radius: 10px;
+    outline: none;
+    border: 4px solid var(--semiColor2);
 }
 
 .contact button {
