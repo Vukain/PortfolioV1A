@@ -1,0 +1,411 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --backdarker: #414140;
+    --backlighter: #b0b0b0;
+    --mainColor1: #9acd32;
+    --mainColor2: #0eceeb;
+    --semiColor1: #21ced1;
+    --semiColor2: #7ccd59;
+    --semiColor3: #4fcd94;
+    background-color: var(--backdarker)
+}
+
+/* font-family: 'Ubuntu', sans-serif; */
+
+/* header */
+
+header {
+    position: relative;
+    background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
+    height: 100vh;
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+header>* {
+    position: absolute;
+}
+
+header img {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+header img.logo {
+    width: unset;
+    top: unset;
+    left: unset;
+    bottom: 22%;
+    right: 12%;
+}
+
+header div.welcome {
+    left: 12%;
+    bottom: 34%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+header h1 {
+    margin-top: 15px;
+    font-size: .7em;
+}
+
+header h2 {
+    font-size: .5em;
+    font-weight: normal;
+}
+
+/* portfolio */
+
+.portfolio {
+    background-color: #414140;
+    text-align: center;
+}
+
+
+.portfolio .project {
+    display: flex;
+    margin: 0 auto 30px;
+    max-width: 1400px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.portfolio .project:nth-of-type(odd) {
+    background-color: var(--semiColor2);
+    border-radius: 0 20px;
+}
+
+
+.portfolio .project:nth-of-type(even) {
+    background-color: var(--semiColor1);
+    flex-direction: row-reverse;
+    border-radius: 20px 0;
+
+}
+
+.portfolio .project:nth-of-type(even) .about {
+    text-align: right;
+    margin-right: 0;
+}
+
+.portfolio .web {
+    width: 50%;
+    background-color: #b0b0b0;
+    height: 500px;
+    position: relative;
+}
+
+
+.portfolio .web img {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+}
+
+
+.portfolio .web::after {
+    content: "";
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 10px;
+    background-color: var(--backdarker);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio .about {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    padding: 10px 20px 20px 0px;
+    text-align: left;
+    width: 50%;
+}
+
+.portfolio .about h2 {
+    font-size: 28px;
+    border-bottom: 2px solid white;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.portfolio .about p {
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+/* section skills*/
+
+section {
+    min-height: 30vh;
+}
+
+.skills {
+    margin-top: 50px;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.skills_wrapper {
+    display: flex;
+}
+
+.skill {
+    flex-basis: 33%;
+    border-radius: 20px;
+    flex-grow: 1;
+    color: white;
+}
+
+.skill:nth-of-type(1) {
+    background-color: var(--semiColor1);
+}
+
+.skill:nth-of-type(2) {
+    background-color: var(--semiColor3);
+    margin: 0 10px;
+}
+
+.skill:nth-of-type(3) {
+    background-color: var(--semiColor2);
+}
+
+.skill h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.skill h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.skill p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 20px 20px;
+}
+
+.skills img {
+    width: 50%;
+    margin: 40px;
+    max-width: 375px;
+}
+
+/* about_me */
+
+.about_me {
+    position: relative;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #414140;
+    z-index: 0;
+}
+
+.about_me .wrap {
+    padding: 100px 60px;
+    background-image: linear-gradient(-45deg, #9acd32 30%, #0eceeb 70%);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.about_me h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about_me p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+.about_me p.author {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* contact */
+
+/* .contact {
+    background-color: #414140;
+} */
+
+.contact h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.contact .wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact button,
+.contact textarea {
+    width: 100%;
+    margin-bottom: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    height: 40px;
+    padding: 5px;
+    background-color: var(--backlighter);
+    text-transform: uppercase;
+}
+
+.contact input {
+    font-size: 12px;
+    border: 2px solid var(--semiColor1);
+}
+
+.contact textarea {
+    height: 120px;
+    border: 2px solid var(--semiColor2);
+}
+
+.contact button {
+    text-align: center;
+    padding: 0;
+    font-size: 18px;
+    line-height: 36px;
+    background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter));
+    color: white;
+    border: 2px solid white;
+    transition: .4s;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact button::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
+    opacity: 0;
+    z-index: -10;
+    transition: .4s;
+}
+
+.contact button:hover::after {
+    opacity: 1;
+}
+
+/* footer */
+
+footer {
+    background-image: linear-gradient(-45deg, #9acd32, #0eceeb);
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+/* extras */
+
+section .section_name {
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 50px 0;
+}
+
+
+.triangles::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+
+    border-left: 100px solid #414140;
+    border-bottom: 100px solid transparent;
+}
+
+.triangles::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+
+    right: 0;
+    bottom: 0;
+
+    border-right: 100px solid #414140;
+    border-top: 100px solid transparent;
+}
+
+.trianglesRev::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    right: 0;
+
+    border-right: 100px solid #414140;
+    border-bottom: 100px solid transparent;
+}
+
+.trianglesRev::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+
+    left: 0;
+    bottom: 0;
+
+    border-left: 100px solid #414140;
+    border-top: 100px solid transparent;
+}
+
+.gradient {
+    background-image: linear-gradient(-25deg, var(--mainColor1), var(--mainColor2));
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
