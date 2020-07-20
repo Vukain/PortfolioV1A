@@ -517,4 +517,9 @@ section .section_name {
         background-color: var(--semiColor3);
         margin: 20px 0;
     }
+
+    div.wrapsor {
+        overflow: hidden;
+        max-width: 100%;
+    }
 }
