@@ -282,6 +282,8 @@ section {
 .contact button,
 .contact textarea {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 25px;
 
     height: 40px;
@@ -316,33 +318,63 @@ section {
 
 .contact button {
     text-align: center;
+    width: 40%;
+    display: block;
     padding: 0;
     font-size: 18px;
     line-height: 36px;
-    background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter));
+    border-radius: 8px 0;
+    background-color: #b0b0b027;;
+    /* background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter)); */
+    background-size: 200% 100%;
     color: white;
     border: 2px solid white;
     transition: .4s;
     z-index: 5;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .contact button::after {
     content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: -100%;
+    left: -10%;
+    width: 120%;
+    height: 0;
     position: absolute;
     background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
-    opacity: 0;
+    opacity: 0.6;
+    /* border-radius: 8px 0; */
     z-index: -10;
     transition: .4s;
+    transform: rotate(-10deg);
+}
+
+.contact button::before {
+    content: "";
+    top: -100%;
+    left: -10%;
+    width: 120%;
+    height: 0;
+    position: absolute;
+    background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
+    opacity: 0.6;
+    /* border-radius: 8px 0; */
+    z-index: -10;
+    transition: .4s;
+    transform: rotate(-10deg);
 }
 
 .contact button:hover::after {
     opacity: 1;
+
+    height: 200%;
+}
+
+.contact button:hover::before {
+    opacity: 1;
+    height: 200%;
 }
 
 /* footer */
@@ -428,6 +460,10 @@ section .section_name {
 div.wrapsor {
     overflow: hidden;
     max-width: 100%;
+}
+
+div.content_wrap {
+    padding: 0 10px;
 }
 
 @media (orientation: portrait) {
