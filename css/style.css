@@ -42,11 +42,11 @@ header img {
 }
 
 header img.logo {
-    width: unset;
+    width: 42%;
     top: unset;
     left: unset;
-    bottom: 22%;
-    right: 12%;
+    bottom: 20%;
+    right: 8%;
 }
 
 header div.welcome {
