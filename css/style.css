@@ -138,7 +138,7 @@ header h2 {
 .portfolio .about {
     color: white;
     font-weight: normal;
-    padding: 10px 20px 20px 0px;
+    padding: 10px 20px 20px 20px;
     text-align: left;
     width: 50%;
 }
@@ -148,13 +148,13 @@ header h2 {
     border-bottom: 2px solid white;
     margin-bottom: 12px;
     padding-bottom: 6px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-transform: uppercase;
 }
 
 .portfolio .about p {
     font-size: 18px;
-    padding-left: 20px;
+
 }
 
 /* section skills*/
@@ -471,10 +471,10 @@ div.content_wrap {
 
     header div.welcome {
         left: unset;
-        right: 8%;
-        bottom: 16%;
+        right: 9%;
+        bottom: 14%;
         color: white;
-        font-size: 54px;
+        font-size: 52px;
         font-weight: bold;
         text-align: right;
         text-transform: uppercase;
@@ -482,8 +482,9 @@ div.content_wrap {
     }
 
     header img.logo {
-        width: 120%;
-        top: 15%;
+        width: unset;
+        height: 60vh;
+        top: 16%;
         left: 0;
 
         bottom: unset;
@@ -541,9 +542,10 @@ div.content_wrap {
         width: 100%;
     }
 
+
     .portfolio .about p {
         font-size: 16px;
-        padding-left: 20px;
+    
     }
 
     .skills_wrapper {
