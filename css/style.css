@@ -430,7 +430,7 @@ section .section_name {
     header div.welcome {
         left: unset;
         right: 8%;
-        bottom: 20%;
+        bottom: 16%;
         color: white;
         font-size: 54px;
         font-weight: bold;
