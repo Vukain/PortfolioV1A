@@ -425,7 +425,13 @@ section .section_name {
 
 }
 
+div.wrapsor {
+    overflow: hidden;
+    max-width: 100%;
+}
+
 @media (orientation: portrait) {
+
 
     header div.welcome {
         left: unset;
@@ -494,7 +500,7 @@ section .section_name {
     } */
 
     .portfolio .about {
-        padding: 20px 50px 50px 50px;
+        padding: 20px 40px 40px 40px;
         text-align: left;
         width: 100%;
     }
@@ -518,8 +524,23 @@ section .section_name {
         margin: 20px 0;
     }
 
-    div.wrapsor {
-        overflow: hidden;
-        max-width: 100%;
+    .triangles::after {
+        top: -2px;
+        left: -30px;
+    }
+
+    .triangles::before {
+        right: -30px;
+        bottom: -2px;
+    }
+
+    .trianglesRev::after {
+        top: -2px;
+        right: -30px;
+    }
+
+    .trianglesRev::before {
+        left: -30px;
+        bottom: -2px;
     }
 }
