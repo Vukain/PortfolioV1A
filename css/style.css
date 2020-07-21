@@ -42,6 +42,10 @@ header img {
     left: 0;
 }
 
+header img.port {
+    display: none;
+}
+
 header img.logo {
     width: 42%;
     top: unset;
@@ -457,7 +461,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
-    max-width: 1920px;
+    /* max-width: 1920px; */
 }
 
 /* extras */
@@ -562,20 +566,26 @@ div.content_wrap {
     padding: 0 10px;
 }
 
+
+
 @media (orientation: portrait),
 (max-width: 600px) {
 
-    /* header  {
-        height: 90vh;
-        top: 10vh;
-    } */
+    header img.port {
+        display: unset;
+        height: 100vh;
+    }
+
+    header img.land {
+        display: none;
+    }
 
     header div.welcome {
         left: unset;
         right: 9%;
-        bottom: 10%;
+        bottom: 18%;
         color: white;
-        font-size: 52px;
+        font-size: 48px;
         font-weight: bold;
         text-align: right;
         text-transform: uppercase;
@@ -870,6 +880,20 @@ div.content_wrap {
         border-top: 0px solid var(--semiColor2);
     }
 
+
+}
+
+@media (orientation: portrait) and (min-width: 600px) {
+
+
+    header div.welcome {
+        right: 9%;
+        bottom: 18%;
+
+        font-size: 86px;
+        font-weight: bold;
+
+    }
 
 }
 
