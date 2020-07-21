@@ -395,7 +395,7 @@ footer {
 /* extras */
 
 section .section_name {
-
+    padding-top: 10vh;
     color: white;
     font-size: 60px;
     text-transform: uppercase;
@@ -654,6 +654,40 @@ div.content_wrap {
         top: 0;
         filter: blur(6px);
     }
+
+    nav ul {
+        list-style: none;
+        margin: 0 auto;
+        z-index: 999999;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.6em;
+        line-height: 2em;
+
+        text-decoration: none;
+        opacity: 0;
+        transition: 2s linear;
+    }
+
+    nav ul a {
+        color: white;
+        text-decoration: none;
+        padding-bottom: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav:hover ul {
+        opacity: 1;
+
+    }
+
+    nav ul a:hover {
+        color: var(--mainColor1);
+        border-bottom: 2px solid currentColor;
+    }
+
 
     nav div.back {
         margin-left: -10px;
