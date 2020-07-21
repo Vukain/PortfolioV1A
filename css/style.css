@@ -50,6 +50,75 @@ header img.logo {
     right: 8%;
 }
 
+@keyframes floater {
+
+    0% {
+        bottom: 20%;
+
+    }
+
+    20% {
+        bottom: 14%;
+
+    }
+
+    40% {
+        bottom: 17%;
+
+    }
+
+    60% {
+        bottom: 12%;
+
+    }
+
+    80% {
+        bottom: 16%;
+
+    }
+
+    100% {
+        bottom: 20%;
+
+    }
+
+}
+
+@keyframes shaker {
+    0% {
+
+        right: 8%;
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.01) rotate(-1deg);
+        right: 9%;
+    }
+
+    40% {
+        transform: scale(1.03) rotate(1deg);
+
+        right: 7%;
+    }
+
+    60% {
+        transform: scale(1.01) rotate(0deg);
+
+        right: 8%;
+    }
+
+    80% {
+        transform: scale(.96) rotate(2deg);
+        right: 6%;
+    }
+
+    100% {
+        transform: scale(1);
+        right: 8%;
+    }
+}
+
 header div.welcome {
     left: 12%;
     bottom: 34%;
@@ -120,7 +189,7 @@ header h2 {
 
 
 .portfolio .web img {
-    width: 30%;
+    height: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -499,7 +568,8 @@ div.content_wrap {
     padding: 0 10px;
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait),
+(max-width: 600px) {
 
     /* header  {
         height: 90vh;
@@ -673,7 +743,11 @@ div.content_wrap {
 
         text-decoration: none;
         opacity: 0;
-        transition: 2s linear;
+        transition: .8s linear;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     nav ul a {
@@ -725,7 +799,7 @@ div.content_wrap {
     }
 
     nav div.front div.ico>div {
-        transition: 1s .5s linear;
+        transition: .8s .4s linear;
     }
 
     nav div.front div.ico>div:nth-child(1) {
@@ -830,6 +904,7 @@ div.content_wrap {
     }
 
     nav ul {
+        position: absolute;
         list-style: none;
         margin: 0 auto;
         z-index: 999999;
@@ -837,11 +912,13 @@ div.content_wrap {
         color: white;
         text-transform: uppercase;
         font-size: 2em;
-        line-height: 1.5em;
-
+        line-height: 1.6em;
         text-decoration: none;
         opacity: 0;
         transition: 2s linear;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
     }
 
     nav ul a {
@@ -850,7 +927,8 @@ div.content_wrap {
         padding-bottom: 4px;
         padding-left: 10px;
         padding-right: 10px;
-        transition: .3s;
+        transition: .2s;
+        letter-spacing: .1em;
     }
 
     nav:hover ul {
@@ -964,4 +1042,32 @@ div.content_wrap {
         border-top: 0px solid var(--semiColor2);
     }
 
+}
+
+@media (orientation: landscape) and (max-width: 1120px) {
+
+    header div.welcome {
+        left: 12%;
+        bottom: 24%;
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: left;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1399px) {
+
+    header img.logo {
+        animation: shaker 13s linear infinite 1s both, floater 17s linear infinite 1s both;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1599px) {
+
+    nav ul {
+        font-size: 2.4em;
+    }
 }
