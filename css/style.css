@@ -10,6 +10,7 @@ body {
     overflow-x: hidden;
     --backdarker: #414140;
     --backlighter: #b0b0b0;
+    --backdarker2: #292929;
     --mainColor1: #9acd32;
     --mainColor2: #0eceeb;
     --semiColor1: #21ced1;
@@ -325,7 +326,8 @@ section {
     font-size: 18px;
     line-height: 36px;
     border-radius: 8px 0;
-    background-color: #b0b0b027;;
+    background-color: #b0b0b027;
+    ;
     /* background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter)); */
     background-size: 200% 100%;
     color: white;
@@ -493,6 +495,10 @@ div.content_wrap {
 
 @media (orientation: portrait) {
 
+    /* header  {
+        height: 90vh;
+        top: 10vh;
+    } */
 
     header div.welcome {
         left: unset;
@@ -570,7 +576,7 @@ div.content_wrap {
 
     .portfolio .about p {
         font-size: 16px;
-    
+
     }
 
     .skills_wrapper {
@@ -613,7 +619,7 @@ div.content_wrap {
         top: 9px;
         left: 9px;
     }
-    
+
     .trianglesLightRight::after {
         top: 9px;
         right: 9px;
@@ -625,4 +631,135 @@ div.content_wrap {
         width: calc(100% - 20px);
         height: calc(100% - 20px);
     }
+
+    nav {
+        /* display: none; */
+        position: fixed;
+        top: -32vh;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+
+        background-attachment: scroll;
+        z-index: 999;
+        transition: .5s;
+
+    }
+
+    nav:hover {
+        top: 0;
+    }
+
+    nav:hover>div.back {
+        top: 0;
+        filter: blur(6px);
+    }
+
+    nav div.back {
+        margin-left: -10px;
+        height: 40vh;
+        width: 110%;
+        background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
+        /* background-attachment: fixed; */
+        filter: blur(0px);
+    }
+
+    nav div.front {
+        background-color: var(--backdarker2);
+        height: calc(40vh - 4px);
+        width: calc(100% + 6px);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    nav div.front div.ico {
+        /* background-color: red; */
+        bottom: 2vw;
+        right: 6%;
+        position: absolute;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    nav div.front div.ico>div {
+        transition: 1s .5s linear;
+    }
+
+    nav div.front div.ico>div:nth-child(1) {
+
+        width: 0px;
+        border-bottom: 0px solid white;
+        border-left: 1.5vw solid transparent;
+        border-right: 1.5vw solid transparent;
+        margin: 0px auto;
+    }
+
+    nav div.front div.ico>div:nth-child(2) {
+        /* bottom: 31px;
+        right: 36px;
+        position: absolute; */
+        margin: 3px auto 3px;
+        /* width: 26px; */
+        width: 100%;
+        /* background-color: white; */
+        /* width: 20px;
+        height: 20px; */
+        border-bottom: 4px solid white;
+        border-left: 1vw solid transparent;
+        border-right: 1vw solid transparent;
+        /* transform: translateX(50%); */
+    }
+
+    nav div.front div.ico>div:nth-child(3) {
+        /* bottom: 20px;
+        right: 36px;
+        position: absolute; */
+        /* background-color: white; */
+        /* width: 20px;
+        height: 20px; */
+        /* width: 26px; */
+        width: 100%;
+        margin: 3px auto;
+        border-top: 7px solid white;
+        border-left: 1vw solid transparent;
+        border-right: 1vw solid transparent;
+        /* transform: translateX(50%); */
+    }
+
+    nav div.front div.ico>div:nth-child(4) {
+        /* bottom: 8px;
+            right: 36px;
+            position: absolute; */
+        /* background-color: white; */
+        /* width: 20px;
+            height: 20px; */
+        width: 0px;
+        border-top: 9px solid white;
+        border-left: 1.5vw solid transparent;
+        border-right: 1.5vw solid transparent;
+        /* transform: translateX(50%); */
+        margin: 3px auto;
+    }
+
+    nav:hover div.front div.ico>div:nth-child(1) {
+        border-bottom: 9px solid white;
+        margin: 3px auto;
+    }
+
+    nav:hover div.front div.ico>div:nth-child(2) {
+        border-bottom: 7px solid white;
+        margin: 3px auto 3px;
+    }
+
+    nav:hover div.front div.ico>div:nth-child(3) {
+        border-top: 4px solid white;
+    }
+
+    nav:hover div.front div.ico>div:nth-child(4) {
+        border-top: 0px solid white;
+    }
+
+
 }
