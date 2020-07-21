@@ -676,10 +676,11 @@ div.content_wrap {
 
     nav div.front div.ico {
         /* background-color: red; */
-        bottom: 2vh;
+        /* bottom: 14px; */
+        top: 33vh;
         right: 6%;
         position: absolute;
-        width: 6vw;
+        width: 7vw;
         height: 6vw;
     }
 
@@ -691,8 +692,8 @@ div.content_wrap {
 
         width: 0px;
         border-bottom: 0px solid white;
-        border-left: 1.5vw solid transparent;
-        border-right: 1.5vw solid transparent;
+        border-left: 2vw solid transparent;
+        border-right: 2vw solid transparent;
         margin: 0px auto;
     }
 
@@ -736,15 +737,15 @@ div.content_wrap {
         /* width: 20px;
             height: 20px; */
         width: 0px;
-        border-top: 9px solid white;
-        border-left: 1.5vw solid transparent;
-        border-right: 1.5vw solid transparent;
+        border-top: 12px solid white;
+        border-left: 2vw solid transparent;
+        border-right: 2vw solid transparent;
         /* transform: translateX(50%); */
         margin: 3px auto;
     }
 
     nav:hover div.front div.ico>div:nth-child(1) {
-        border-bottom: 9px solid white;
+        border-bottom: 12px solid white;
         margin: 3px auto;
     }
 
