@@ -895,7 +895,7 @@ div.content_wrap {
     }
 
     nav div.front div.ico>div {
-        transition: .6s .5s linear;
+        transition: .6s .4s linear;
     }
 
     nav div.front div.ico>div:nth-child(1) {
