@@ -873,7 +873,6 @@ section {
 
 .contact button:hover::after {
     opacity: 1;
-
     height: 200%;
 }
 
@@ -887,7 +886,6 @@ section {
 footer {
     background-image: linear-gradient(-45deg, #9acd32, #0eceeb);
     color: white;
-
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
@@ -905,11 +903,10 @@ section .section_name {
     margin-top: calc(-10vh + 50px);
 }
 
-@ .triangles::after {
+.triangles::after {
     content: "";
     position: absolute;
     z-index: 10;
-
     top: -2px;
     left: -2px;
 
@@ -921,7 +918,6 @@ section .section_name {
     content: "";
     position: absolute;
     z-index: 10;
-
     right: -2px;
     bottom: -2px;
 
@@ -933,7 +929,6 @@ section .section_name {
     content: "";
     position: absolute;
     z-index: 10;
-
     top: -2px;
     right: -2px;
 
@@ -945,7 +940,6 @@ section .section_name {
     content: "";
     position: absolute;
     z-index: 10;
-
     left: -2px;
     bottom: -2px;
 
@@ -957,7 +951,6 @@ section .section_name {
     content: "";
     position: absolute;
     z-index: 3;
-
     top: 9px;
     left: 9px;
 
@@ -969,7 +962,6 @@ section .section_name {
     content: "";
     position: absolute;
     z-index: 3;
-
     top: 9px;
     right: 9px;
 
