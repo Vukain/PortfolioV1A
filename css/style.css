@@ -55,65 +55,7 @@ header img.logo {
     right: 8%;
 }
 
-@keyframes floater {
 
-    0% {
-        bottom: 20%;
-    }
-
-    20% {
-        bottom: 14%;
-    }
-
-    40% {
-        bottom: 17%;
-    }
-
-    60% {
-        bottom: 12%;
-    }
-
-    80% {
-        bottom: 16%;
-    }
-
-    100% {
-        bottom: 20%;
-    }
-
-}
-
-@keyframes shaker {
-    0% {
-        right: 8%;
-        transform: scale(1) rotate(0deg);
-    }
-
-    20% {
-        transform: scale(1.01) rotate(-1.4deg);
-        right: 9%;
-    }
-
-    40% {
-        transform: scale(1.03) rotate(0.8deg);
-        right: 7%;
-    }
-
-    60% {
-        transform: scale(1.01) rotate(-0.6deg);
-        right: 8%;
-    }
-
-    80% {
-        transform: scale(.96) rotate(1.6deg);
-        right: 6%;
-    }
-
-    100% {
-        transform: scale(1) rotate(0deg);
-        right: 8%;
-    }
-}
 
 header div.welcome {
     left: 12%;
@@ -154,6 +96,66 @@ header h2 {
 
     header img.logo {
         animation: shaker 13s linear infinite 1s both, floater 17s linear infinite 1s both;
+    }
+
+    @keyframes floater {
+
+        0% {
+            bottom: 20%;
+        }
+
+        20% {
+            bottom: 14%;
+        }
+
+        40% {
+            bottom: 17%;
+        }
+
+        60% {
+            bottom: 12%;
+        }
+
+        80% {
+            bottom: 16%;
+        }
+
+        100% {
+            bottom: 20%;
+        }
+
+    }
+
+    @keyframes shaker {
+        0% {
+            right: 8%;
+            transform: scale(1) rotate(0deg);
+        }
+
+        20% {
+            transform: scale(1.01) rotate(-1.4deg);
+            right: 9%;
+        }
+
+        40% {
+            transform: scale(1.03) rotate(0.8deg);
+            right: 7%;
+        }
+
+        60% {
+            transform: scale(1.01) rotate(-0.6deg);
+            right: 8%;
+        }
+
+        80% {
+            transform: scale(.96) rotate(1.6deg);
+            right: 6%;
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg);
+            right: 8%;
+        }
     }
 }
 
@@ -237,7 +239,6 @@ nav ul {
     z-index: 999999;
     opacity: 0;
     transition: opacity 2s linear;
-
     list-style: none;
 
     color: white;
@@ -329,8 +330,8 @@ nav div.front {
         width: 0px;
         margin: 0px auto;
         border-bottom: 0px solid white;
-        border-left: 1.8vh solid transparent;
-        border-right: 1.8vh solid transparent;
+        border-left: 1.74vh solid transparent;
+        border-right: 1.74vh solid transparent;
     }
 
     nav div.front div.ico>div:nth-child(2) {
@@ -339,25 +340,22 @@ nav div.front {
         border-bottom: .9vh solid white;
         border-left: 1vh solid transparent;
         border-right: 1vh solid transparent;
-
     }
 
     nav div.front div.ico>div:nth-child(3) {
         width: 100%;
         margin: 4px auto;
         border-top: 1.7vh solid white;
-        border-left: 1.4vh solid transparent;
-        border-right: 1.4vh solid transparent;
-
+        border-left: 1.36vh solid transparent;
+        border-right: 1.36vh solid transparent;
     }
 
     nav div.front div.ico>div:nth-child(4) {
         width: 0px;
         margin: 4px auto;
         border-top: 2.2vh solid white;
-        border-left: 1.8vh solid transparent;
-        border-right: 1.8vh solid transparent;
-
+        border-left: 1.74vh solid transparent;
+        border-right: 1.74vh solid transparent;
     }
 
     nav:hover div.front div.ico>div:nth-child(1) {
@@ -368,12 +366,11 @@ nav div.front {
     nav:hover div.front div.ico>div:nth-child(2) {
         margin: 4px auto;
         border-bottom: 1.7vh solid var(--semiColor3);
-        border-left: 1.4vh solid transparent;
-        border-right: 1.4vh solid transparent;
+        border-left: 1.36vh solid transparent;
+        border-right: 1.36vh solid transparent;
     }
 
     nav:hover div.front div.ico>div:nth-child(3) {
-
         border-top: .9vh solid var(--semiColor1);
         border-left: 1vh solid transparent;
         border-right: 1vh solid transparent;
@@ -406,18 +403,18 @@ nav div.front {
 
 
     nav div.front div.ico {
-        top: 33vh;
+        top: 33.5vh;
         right: 6%;
         position: absolute;
         width: 7vw;
-        height: 6vw;
+        /* height: 6vw; */
     }
 
     nav div.front div.ico>div {
         transition: .8s .4s linear;
     }
 
-    nav div.front div.ico>div:nth-child(1) {
+    /* nav div.front div.ico>div:nth-child(1) {
         width: 0px;
         margin: 0px auto;
         border-bottom: 0px solid white;
@@ -464,6 +461,60 @@ nav div.front {
 
     nav:hover div.front div.ico>div:nth-child(3) {
         border-top: 4px solid var(--semiColor1);
+    }
+
+    nav:hover div.front div.ico>div:nth-child(4) {
+        border-top: 0px solid var(--semiColor2);
+    } */
+
+    nav div.front div.ico>div:nth-child(1) {
+        width: 0px;
+        margin: 0px auto;
+        border-bottom: 0px solid white;
+        border-left: 1.74vw solid transparent;
+        border-right: 1.74vw solid transparent;
+    }
+
+    nav div.front div.ico>div:nth-child(2) {
+        width: 100%;
+        margin: 3px auto;
+        border-bottom: .9vw solid white;
+        border-left: 1vw solid transparent;
+        border-right: 1vw solid transparent;
+    }
+
+    nav div.front div.ico>div:nth-child(3) {
+        width: 100%;
+        margin: 3px auto;
+        border-top: 1.7vw solid white;
+        border-left: 1.36vw solid transparent;
+        border-right: 1.36vw solid transparent;
+    }
+
+    nav div.front div.ico>div:nth-child(4) {
+        width: 0px;
+        margin: 3px auto;
+        border-top: 2.2vw solid white;
+        border-left: 1.74vw solid transparent;
+        border-right: 1.74vw solid transparent;
+    }
+
+    nav:hover div.front div.ico>div:nth-child(1) {
+        margin: 3px auto;
+        border-bottom: 2.2vw solid var(--semiColor2);
+    }
+
+    nav:hover div.front div.ico>div:nth-child(2) {
+        margin: 3px auto;
+        border-bottom: 1.7vw solid var(--semiColor3);
+        border-left: 1.36vw solid transparent;
+        border-right: 1.36vw solid transparent;
+    }
+
+    nav:hover div.front div.ico>div:nth-child(3) {
+        border-top: .9vw solid var(--semiColor1);
+        border-left: 1vw solid transparent;
+        border-right: 1vw solid transparent;
     }
 
     nav:hover div.front div.ico>div:nth-child(4) {
@@ -571,7 +622,6 @@ nav div.front {
         flex-direction: column;
     }
 
-
     .portfolio .project:nth-of-type(even) {
         flex-direction: column;
     }
@@ -599,7 +649,6 @@ nav div.front {
 
     .portfolio .about p {
         font-size: 16px;
-
     }
 
     .portfolio .web::before {
@@ -646,7 +695,6 @@ section {
 }
 
 .skill h1 {
-
     font-size: 26px;
     margin-bottom: 15px;
 }
@@ -681,7 +729,6 @@ section {
 
     section .section_name {
         font-size: 40px;
-
     }
 
     .skill:nth-of-type(2) {
