@@ -149,6 +149,16 @@
   </div>
   <footer>&copy;Vukain</footer>
   </div>
+
+  <script>
+    const foxerText = document.querySelector(".section_name")
+    const navigatorObject = window.navigator;
+    let sBrowser, sUsrAg = navigator.userAgent;
+    if (sUsrAg.indexOf("Firefox") > -1) {
+      sBrowser = "Mozilla Firefox";
+      foxerText.classList.remove("gradient")
+    }
+  </script>
 </body>
 
 </html>
