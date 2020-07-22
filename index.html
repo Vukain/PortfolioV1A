@@ -151,12 +151,14 @@
   </div>
 
   <script>
-    const foxerText = document.querySelector(".section_name")
+    const foxerText = document.querySelectorAll(".section_name")
     const navigatorObject = window.navigator;
     let sBrowser, sUsrAg = navigator.userAgent;
     if (sUsrAg.indexOf("Firefox") > -1) {
       sBrowser = "Mozilla Firefox";
-      foxerText.classList.remove("gradient")
+      foxerText.forEach(function (div) {
+        div.classList.remove("gradient")
+      })
     }
   </script>
 </body>
