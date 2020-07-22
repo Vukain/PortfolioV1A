@@ -6,20 +6,28 @@
   <title>Tester</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='icon' href='images/favicon.png' type='image/x-icon'>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
   <div class="wrapsor">
+
     <header>
+
       <div class="welcome">
         <p>cześć!</p>
         <h1>jestem vukain</h1>
         <h2>fullstack web developer</h2>
       </div>
+      <img class="logo" src="images/logo_placeholder.png" alt="">
+      <img class="land" src="images/tester.png" alt="">
+      <img class="port" src="images/tester_port.png" alt="">
+
       <nav>
         <div class="back">
+          <div class="arrow"></div>
         </div>
         <div class="front">
           <ul>
@@ -28,6 +36,7 @@
             <li><a href="#about">o mnie</a></li>
             <li><a href="#contact">kontakt</a></li>
           </ul>
+          <div class="arrow"></div>
           <div class="ico">
             <div></div>
             <div></div>
@@ -36,12 +45,11 @@
           </div>
         </div>
       </nav>
-      <img class="logo" src="images/logo_placeholder.png" alt="">
-      <img class="land" src="images/tester.png" alt="">
-      <img class="port" src="images/tester_port.png" alt="">
 
     </header>
+
     <div class="content_wrap">
+
       <section class="portfolio" id="projects">
         <h1 class="section_name gradient">Projekty</h1>
         <div class="project triangles">
@@ -130,7 +138,6 @@
             ipsum, deleniti temporibus possimus labore doloremque veritatis beatae earum corporis quod natus magni quis,
             aut
             molestiae reprehenderit ex? Ignavis semper feriae.</p>
-
         </div>
       </section>
 
@@ -144,22 +151,13 @@
             <button class="hid">Wyślij wiadomość</button>
           </form>
         </div>
+      </section>
     </div>
-    </section>
-  </div>
-  <footer>&copy;Vukain</footer>
+
+    <footer>&copy;Vukain</footer>
   </div>
 
-  <script>
-    const foxerText = document.querySelectorAll(".section_name")
-    let sBrowser, sUsrAg = navigator.userAgent;
-    if (sUsrAg.indexOf("Firefox") > -1) {
-      sBrowser = "Mozilla Firefox";
-      foxerText.forEach(function (div) {
-        div.classList.remove("gradient")
-      })
-    }
-  </script>
+  <script src="js/main.js"> </script>
 </body>
 
 </html>
