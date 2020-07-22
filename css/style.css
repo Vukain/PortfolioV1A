@@ -646,7 +646,6 @@ nav div.front {
         width: 100%;
     }
 
-
     .portfolio .about p {
         font-size: 16px;
     }
@@ -700,7 +699,6 @@ section {
 }
 
 .skill h2 {
-
     font-size: 26px;
     text-transform: uppercase;
     margin-top: 20px;
@@ -708,7 +706,6 @@ section {
 }
 
 .skill p {
-
     font-size: 16px;
     font-weight: 300;
     margin: 20px 20px;
@@ -725,10 +722,6 @@ section {
 
     .skills_wrapper {
         flex-direction: column;
-    }
-
-    section .section_name {
-        font-size: 40px;
     }
 
     .skill:nth-of-type(2) {
@@ -912,8 +905,7 @@ section .section_name {
     margin-top: calc(-10vh + 50px);
 }
 
-
-.triangles::after {
+@ .triangles::after {
     content: "";
     position: absolute;
     z-index: 10;
@@ -1037,5 +1029,9 @@ div.content_wrap {
         right: 9px;
         border-right: 66px solid var(--backlighter);
         border-bottom: 66px solid transparent;
+    }
+
+    section .section_name {
+        font-size: 40px;
     }
 }
