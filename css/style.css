@@ -45,6 +45,7 @@ body.light {
     --middleColor: #e6822e;
     --mainColor3: #ff4423;
     --inputBg: white;
+
     --changingFont: #414140;
 
     /* background-color: var(--backdarker); */
@@ -90,7 +91,7 @@ header img.logo {
 header div.welcome {
     left: 12%;
     bottom: 34%;
-    color: white;
+    color: var(--changingFont);
     font-size: 80px;
     font-weight: bold;
     text-align: left;
@@ -318,7 +319,7 @@ nav div.front {
 
 nav div.extras {
     position: absolute;
-    top: 5vh;
+    top: 8vh;
     left: 5vh;
 }
 
@@ -836,12 +837,26 @@ section {
     /* background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter)); */
     background-size: 200% 100%;
     color: white;
-    border: 2px solid white;
+    border: 2px solid var(--mainColor2);
     transition: .4s;
     z-index: 5;
     position: relative;
     cursor: pointer;
     overflow: hidden;
+}
+
+.contact button:hover {
+    border: 2px solid var(--whiteFont);
+}
+
+body.light .contact button {
+    color: var(--changingFont);
+    border: 2px solid var(--mainColor2);
+}
+
+body.light .contact button:hover {
+    color: var(--whiteFont);
+    border: 2px solid var(--whiteFont);
 }
 
 .contact button::after {
