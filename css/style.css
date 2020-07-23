@@ -6,12 +6,9 @@
 }
 
 body {
-    max-width: 100%;
-    overflow-x: hidden;
-
     --backdarker2: #292929;
     --backdarker: #414140;
-    --backlighter: #b0b0b0;
+    --backlighter: #292929;
 
     --mainColor1: #9acd32;
     --mainColor2: #0eceeb;
@@ -22,15 +19,21 @@ body {
 
     --middleColor: #60cd7e;
     --buttonBg: #b0b0b027;
+
+    --changingFont: white;
     --whiteFont: #ffffff;
     --inputBg: #b0b0b0;
+
+    max-width: 100%;
+    overflow-x: hidden;
     background-color: var(--backdarker);
 }
 
-body.lighter {
-    --backdarker2: #fffbf6;
-    --backdarker: #fff4d7;
-    --backlighter: #414140;
+body.light {
+    --backdarker2: #fff4d7;
+    /* --backdarker: #fff4d7; #fffbf6 */
+    --backdarker: #f4f4e4;
+    --backlighter: #b0b0b0;
 
     --mainColor1: #fdd315;
     --mainColor2: #c50c53;
@@ -42,6 +45,8 @@ body.lighter {
     --middleColor: #e6822e;
     --mainColor3: #ff4423;
     --inputBg: white;
+    --changingFont: #414140;
+
     /* background-color: var(--backdarker); */
 }
 
@@ -210,8 +215,8 @@ header h2 {
 
     header img.logo {
         width: unset;
-        height: 60vh;
-        top: 16%;
+        height: 56vh;
+        top: 14%;
         left: 0;
         bottom: unset;
         right: unset;
@@ -275,7 +280,7 @@ nav ul {
 }
 
 nav ul a {
-    color: white;
+    color: var(--changingFont);
     text-decoration: none;
     padding-bottom: 4px;
     padding-left: 10px;
@@ -309,6 +314,23 @@ nav div.front {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+nav div.extras {
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+}
+
+nav div.extras i {
+    display: block;
+    color: var(--changingFont);
+    font-size: 2em;
+    margin: 20px;
+}
+
+nav div.extras i:hover {
+    color: var(--mainColor2);
 }
 
 @media (orientation: landscape) {
@@ -354,7 +376,7 @@ nav div.front {
     nav div.front div.ico>div:nth-child(1) {
         width: 0px;
         margin: 0px auto;
-        border-bottom: 0px solid white;
+        border-bottom: 0px solid var(--changingFont);
         border-left: 1.74vh solid transparent;
         border-right: 1.74vh solid transparent;
     }
@@ -362,7 +384,7 @@ nav div.front {
     nav div.front div.ico>div:nth-child(2) {
         width: 100%;
         margin: 4px auto;
-        border-bottom: .9vh solid white;
+        border-bottom: .9vh solid var(--changingFont);
         border-left: 1vh solid transparent;
         border-right: 1vh solid transparent;
     }
@@ -370,7 +392,7 @@ nav div.front {
     nav div.front div.ico>div:nth-child(3) {
         width: 100%;
         margin: 4px auto;
-        border-top: 1.7vh solid white;
+        border-top: 1.7vh solid var(--changingFont);
         border-left: 1.36vh solid transparent;
         border-right: 1.36vh solid transparent;
     }
@@ -378,7 +400,7 @@ nav div.front {
     nav div.front div.ico>div:nth-child(4) {
         width: 0px;
         margin: 4px auto;
-        border-top: 2.2vh solid white;
+        border-top: 2.2vh solid var(--changingFont);
         border-left: 1.74vh solid transparent;
         border-right: 1.74vh solid transparent;
     }
@@ -439,63 +461,11 @@ nav div.front {
         transition: .8s .4s linear;
     }
 
-    /* nav div.front div.ico>div:nth-child(1) {
-        width: 0px;
-        margin: 0px auto;
-        border-bottom: 0px solid white;
-        border-left: 2vw solid transparent;
-        border-right: 2vw solid transparent;
-    }
-
-    nav div.front div.ico>div:nth-child(2) {
-        width: 100%;
-        margin: 3px auto;
-        border-bottom: 4px solid white;
-        border-left: 1vw solid transparent;
-        border-right: 1vw solid transparent;
-
-    }
-
-    nav div.front div.ico>div:nth-child(3) {
-
-        width: 100%;
-        margin: 3px auto;
-        border-top: 7px solid white;
-        border-left: 1vw solid transparent;
-        border-right: 1vw solid transparent;
-    }
-
-    nav div.front div.ico>div:nth-child(4) {
-
-        width: 0px;
-        margin: 3px auto;
-        border-top: 12px solid white;
-        border-left: 2vw solid transparent;
-        border-right: 2vw solid transparent;
-    }
-
-    nav:hover div.front div.ico>div:nth-child(1) {
-        border-bottom: 12px solid var(--semiColor2);
-        margin: 3px auto;
-    }
-
-    nav:hover div.front div.ico>div:nth-child(2) {
-        border-bottom: 7px solid var(--semiColor3);
-        margin: 3px auto;
-    }
-
-    nav:hover div.front div.ico>div:nth-child(3) {
-        border-top: 4px solid var(--semiColor1);
-    }
-
-    nav:hover div.front div.ico>div:nth-child(4) {
-        border-top: 0px solid var(--semiColor2);
-    } */
 
     nav div.front div.ico>div:nth-child(1) {
         width: 0px;
         margin: 0px auto;
-        border-bottom: 0px solid white;
+        border-bottom: 0px solid var(--changingFont);
         border-left: 1.74vw solid transparent;
         border-right: 1.74vw solid transparent;
     }
@@ -503,7 +473,7 @@ nav div.front {
     nav div.front div.ico>div:nth-child(2) {
         width: 100%;
         margin: 3px auto;
-        border-bottom: .9vw solid white;
+        border-bottom: .9vw solid var(--changingFont);
         border-left: 1vw solid transparent;
         border-right: 1vw solid transparent;
     }
@@ -511,7 +481,7 @@ nav div.front {
     nav div.front div.ico>div:nth-child(3) {
         width: 100%;
         margin: 3px auto;
-        border-top: 1.7vw solid white;
+        border-top: 1.7vw solid var(--changingFont);
         border-left: 1.36vw solid transparent;
         border-right: 1.36vw solid transparent;
     }
@@ -519,7 +489,7 @@ nav div.front {
     nav div.front div.ico>div:nth-child(4) {
         width: 0px;
         margin: 3px auto;
-        border-top: 2.2vw solid white;
+        border-top: 2.2vw solid var(--changingFont);
         border-left: 1.74vw solid transparent;
         border-right: 1.74vw solid transparent;
     }
@@ -590,6 +560,8 @@ nav div.front {
 .portfolio .web {
     width: 50%;
     background-color: var(--backlighter);
+    /* background-image: url("../images/port_bg.svg"); */
+    /* background-size: cover; */
     height: 500px;
     position: relative;
     border-radius: 20px;
@@ -611,12 +583,18 @@ nav div.front {
     width: calc(100% - 30px);
     height: calc(100% - 30px);
     border-radius: 10px;
-    background-color: var(--backdarker);
+    background-image: url("../images/port_bg_dark.svg");
+    background-size: cover;
     position: absolute;
     z-index: 2;
+    opacity: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+body.light .portfolio .web::before {
+    background-image: url("../images/port_bg_light.svg");
 }
 
 .portfolio .about {

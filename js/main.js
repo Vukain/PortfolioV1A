@@ -6,3 +6,9 @@ if (sUsrAg.indexOf("Firefox") > -1) {
         div.classList.remove("gradient")
     })
 }
+
+const darkLight = document.querySelector(".fa-adjust")
+
+darkLight.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+})
