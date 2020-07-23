@@ -8,15 +8,40 @@
 body {
     max-width: 100%;
     overflow-x: hidden;
+
+    --backdarker2: #292929;
     --backdarker: #414140;
     --backlighter: #b0b0b0;
-    --backdarker2: #292929;
+
     --mainColor1: #9acd32;
     --mainColor2: #0eceeb;
-    --semiColor1: #21ced1;
+
     --semiColor2: #7ccd59;
     --semiColor3: #4fcd94;
-    --middleColor: #5ecd81;
+    --semiColor1: #21ced1;
+
+    --middleColor: #60cd7e;
+    --buttonBg: #b0b0b027;
+    --whiteFont: #ffffff;
+    --inputBg: #b0b0b0;
+    background-color: var(--backdarker);
+}
+
+body.lighter {
+    --backdarker2: #fffbf6;
+    --backdarker: #fff4d7;
+    --backlighter: #414140;
+
+    --mainColor1: #fdd315;
+    --mainColor2: #c50c53;
+
+    --semiColor2: #f1c13e;
+    --semiColor3: #e8882d;
+    --semiColor1: #d54342;
+
+    --middleColor: #e6822e;
+    --mainColor3: #ff4423;
+    --inputBg: white;
     background-color: var(--backdarker);
 }
 
@@ -526,7 +551,7 @@ nav div.front {
 /* portfolio */
 
 .portfolio {
-    background-color: #414140;
+    background-color: var(--backdarker);
     text-align: center;
 }
 
@@ -564,7 +589,7 @@ nav div.front {
 
 .portfolio .web {
     width: 50%;
-    background-color: #b0b0b0;
+    background-color: var(--backlighter);
     height: 500px;
     position: relative;
     border-radius: 20px;
@@ -737,13 +762,13 @@ section {
     text-align: center;
     max-width: 1400px;
     margin: 0 auto;
-    color: #414140;
+    color: var(--whiteFont);
     z-index: 0;
 }
 
 .about_me .wrap {
     padding: 100px 60px;
-    background-image: linear-gradient(-45deg, #9acd32 30%, #0eceeb 70%);
+    background-image: linear-gradient(-45deg, var(--semiColor2) 30%, var(--semiColor1) 70%);
     background-attachment: fixed;
     background-position: center center;
     background-size: 100% 100%;
@@ -793,7 +818,7 @@ section {
 
     height: 40px;
     padding: 5px;
-    background-color: var(--backlighter);
+    background-color: var(--inputBg);
     text-transform: uppercase;
 }
 
@@ -829,7 +854,7 @@ section {
     font-size: 18px;
     line-height: 36px;
     border-radius: 8px 0;
-    background-color: #b0b0b027;
+    background-color: var(--buttonBg);
     /* background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter)); */
     background-size: 200% 100%;
     color: white;
@@ -884,7 +909,7 @@ section {
 /* footer */
 
 footer {
-    background-image: linear-gradient(-45deg, #9acd32, #0eceeb);
+    background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -910,7 +935,7 @@ section .section_name {
     top: -2px;
     left: -2px;
 
-    border-left: 100px solid #414140;
+    border-left: 100px solid var(--backdarker);
     border-bottom: 100px solid transparent;
 }
 
@@ -921,7 +946,7 @@ section .section_name {
     right: -2px;
     bottom: -2px;
 
-    border-right: 100px solid #414140;
+    border-right: 100px solid var(--backdarker);
     border-top: 100px solid transparent;
 }
 
@@ -932,7 +957,7 @@ section .section_name {
     top: -2px;
     right: -2px;
 
-    border-right: 100px solid #414140;
+    border-right: 100px solid var(--backdarker);
     border-bottom: 100px solid transparent;
 }
 
@@ -943,7 +968,7 @@ section .section_name {
     left: -2px;
     bottom: -2px;
 
-    border-left: 100px solid #414140;
+    border-left: 100px solid var(--backdarker);
     border-top: 100px solid transparent;
 }
 
