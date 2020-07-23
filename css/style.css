@@ -42,7 +42,7 @@ body.lighter {
     --middleColor: #e6822e;
     --mainColor3: #ff4423;
     --inputBg: white;
-    background-color: var(--backdarker);
+    /* background-color: var(--backdarker); */
 }
 
 /* font-family: 'Ubuntu', sans-serif; */
