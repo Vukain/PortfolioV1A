@@ -18,11 +18,11 @@ body {
     --semiColor1: #21ced1;
 
     --middleColor: #60cd7e;
-    --buttonBg: #b0b0b027;
 
-    --changingFont: white;
-    --whiteFont: #ffffff;
+    --buttonBg: #b0b0b027;
     --inputBg: #b0b0b0;
+    --changingFont: #ffffff;
+    --whiteFont: #ffffff;
 
     max-width: 100%;
     overflow-x: hidden;
@@ -39,16 +39,16 @@ body.light {
     --mainColor2: #c50c53;
 
     --semiColor2: #f1c13e;
-    --semiColor3: #e8882d;
-    --semiColor1: #d54342;
+    --semiColor3: #ed9a26;
+    --semiColor1: #d9543d;
 
+    /* --semiColor1: #d54342; */
+    /* --semiColor3: #e8882d; */
+    /* --mainColor3: #ff4423; */
     --middleColor: #e6822e;
-    --mainColor3: #ff4423;
+
     --inputBg: white;
-
     --changingFont: #414140;
-
-    /* background-color: var(--backdarker); */
 }
 
 /* font-family: 'Ubuntu', sans-serif; */
@@ -86,8 +86,6 @@ header img.logo {
     right: 8%;
 }
 
-
-
 header div.welcome {
     left: 12%;
     bottom: 34%;
@@ -114,7 +112,6 @@ header h2 {
     header div.welcome {
         left: 12%;
         bottom: 24%;
-        color: white;
         font-size: 60px;
         font-weight: bold;
         text-align: left;
@@ -206,7 +203,6 @@ header h2 {
         left: unset;
         right: 9%;
         bottom: 20%;
-        color: white;
         font-size: 48px;
         font-weight: bold;
         text-align: right;
@@ -251,15 +247,7 @@ nav {
     transition: .5s;
 }
 
-nav:hover {
-    top: 0;
-}
 
-
-nav:hover>div.back {
-    top: 0;
-    filter: blur(6px);
-}
 
 
 nav ul {
@@ -272,7 +260,6 @@ nav ul {
     transition: opacity 2s linear;
     list-style: none;
 
-    color: white;
     text-align: center;
     text-transform: uppercase;
     font-size: 2em;
@@ -283,19 +270,17 @@ nav ul {
 nav ul a {
     color: var(--changingFont);
     text-decoration: none;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     padding-left: 10px;
     padding-right: 10px;
     transition: .2s;
     letter-spacing: .1em;
 }
 
-nav:hover ul {
-    opacity: 1;
-}
+
 
 nav ul a:hover {
-    color: var(--mainColor1);
+    color: var(--semiColor3);
     border-bottom: 2px solid currentColor;
 }
 
@@ -319,15 +304,16 @@ nav div.front {
 
 nav div.extras {
     position: absolute;
-    top: 8vh;
-    left: 5vh;
+    top: 50%;
+    left: 4vh;
+    transform: translateY(-60%);
 }
 
 nav div.extras i {
     display: block;
     color: var(--changingFont);
     font-size: 2em;
-    margin: 20px;
+    margin: 2vh;
 }
 
 nav div.extras i:hover {
@@ -335,6 +321,19 @@ nav div.extras i:hover {
 }
 
 @media (orientation: landscape) {
+
+    nav:hover ul {
+        opacity: 1;
+    }
+
+    nav:hover {
+        top: 0;
+    }
+
+    nav:hover>div.back {
+        top: 0;
+        filter: blur(6px);
+    }
 
     nav div.back div.arrow {
         position: absolute;
@@ -449,6 +448,32 @@ nav div.extras i:hover {
         transition: opacity .8s linear;
     }
 
+    nav.active ul {
+        opacity: 1;
+    }
+
+    nav.active {
+        top: 0;
+    }
+
+    nav.active>div.back {
+        top: 0;
+        filter: blur(6px);
+    }
+
+    nav div.extras {
+        position: absolute;
+        top: calc(33.5vh + 3px);
+        bottom: 6px;
+        left: 2vh;
+        transform: translateY(0);
+    }
+
+    nav div.extras i {
+        display: inline-block;
+        font-size: 1.8em;
+        margin: 0 6px;
+    }
 
     nav div.front div.ico {
         top: 33.5vh;
@@ -495,25 +520,25 @@ nav div.extras i:hover {
         border-right: 1.74vw solid transparent;
     }
 
-    nav:hover div.front div.ico>div:nth-child(1) {
+    nav.active div.front div.ico>div:nth-child(1) {
         margin: 3px auto;
         border-bottom: 2.2vw solid var(--semiColor2);
     }
 
-    nav:hover div.front div.ico>div:nth-child(2) {
+    nav.active div.front div.ico>div:nth-child(2) {
         margin: 3px auto;
         border-bottom: 1.7vw solid var(--semiColor3);
         border-left: 1.36vw solid transparent;
         border-right: 1.36vw solid transparent;
     }
 
-    nav:hover div.front div.ico>div:nth-child(3) {
+    nav.active div.front div.ico>div:nth-child(3) {
         border-top: .9vw solid var(--semiColor1);
         border-left: 1vw solid transparent;
         border-right: 1vw solid transparent;
     }
 
-    nav:hover div.front div.ico>div:nth-child(4) {
+    nav.active div.front div.ico>div:nth-child(4) {
         border-top: 0px solid var(--semiColor2);
     }
 
@@ -561,8 +586,6 @@ nav div.extras i:hover {
 .portfolio .web {
     width: 50%;
     background-color: var(--backlighter);
-    /* background-image: url("../images/port_bg.svg"); */
-    /* background-size: cover; */
     height: 500px;
     position: relative;
     border-radius: 20px;
@@ -599,7 +622,7 @@ body.light .portfolio .web::before {
 }
 
 .portfolio .about {
-    color: white;
+    color: var(--changingFont);
     font-weight: normal;
     padding: 10px 20px 20px 20px;
     text-align: left;
@@ -608,7 +631,7 @@ body.light .portfolio .web::before {
 
 .portfolio .about h2 {
     font-size: 28px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--changingFont);
     margin-bottom: 12px;
     padding-bottom: 6px;
     /* margin-left: 20px; */
@@ -636,7 +659,7 @@ body.light .portfolio .web::before {
     }
 
     .portfolio .web img {
-        width: 30%;
+        width: 40%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -681,7 +704,7 @@ section {
     flex-basis: 33%;
     border-radius: 20px;
     flex-grow: 1;
-    color: white;
+    color: var(--changingFont);
 }
 
 .skill:nth-of-type(1) {
@@ -710,8 +733,8 @@ section {
 }
 
 .skill p {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 18px;
+
     margin: 20px 20px;
 }
 
@@ -741,7 +764,7 @@ section {
     text-align: center;
     max-width: 1400px;
     margin: 0 auto;
-    color: var(--whiteFont);
+    color: var(--changingFont);
     z-index: 0;
 }
 
@@ -763,7 +786,7 @@ section {
 }
 
 .about_me p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .about_me p.author {
@@ -778,7 +801,6 @@ section {
     font-size: 26px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    color: white;
     text-align: center;
 }
 
@@ -836,7 +858,7 @@ section {
     background-color: var(--buttonBg);
     /* background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter)); */
     background-size: 200% 100%;
-    color: white;
+    color: var(--changingFont);
     border: 2px solid var(--mainColor2);
     transition: .4s;
     z-index: 5;
@@ -850,7 +872,7 @@ section {
 }
 
 body.light .contact button {
-    color: var(--changingFont);
+
     border: 2px solid var(--mainColor2);
 }
 
@@ -903,7 +925,7 @@ body.light .contact button:hover {
 
 footer {
     background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
-    color: white;
+    color: var(--changingFont);
     text-align: center;
     padding: 20px 0;
     font-size: 20px;

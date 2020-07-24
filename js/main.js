@@ -14,6 +14,12 @@ const queUno = document.querySelectorAll(".que_uno");
 const queDos = document.querySelectorAll(".que_dos");
 
 const darkLight = document.querySelector(".fa-adjust");
+const nav = document.querySelector("nav");
+const burger = document.querySelector(".hamburger");
+
+
+console.log(nav)
+console.log(burger)
 
 darkLight.addEventListener("click", () => {
     document.body.classList.toggle("light");
@@ -33,4 +39,8 @@ darkLight.addEventListener("click", () => {
             img.setAttribute("src", queYellow)
         })
     }
+})
+
+burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
 })
