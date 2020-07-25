@@ -269,6 +269,7 @@ nav ul {
 
 nav ul a {
     color: var(--changingFont);
+
     text-decoration: none;
     padding-bottom: 3px;
     padding-left: 10px;
@@ -309,11 +310,17 @@ nav div.extras {
     transform: translateY(-60%);
 }
 
+nav div.extras a {
+    text-decoration: none;
+}
+
 nav div.extras i {
     display: block;
     color: var(--changingFont);
     font-size: 2em;
     margin: 2vh;
+    transition: color .3s;
+    cursor: pointer;
 }
 
 nav div.extras i:hover {
