@@ -935,11 +935,17 @@ footer {
 
 /* extra */
 
-.anim1 {
+.anim1,
+.anim2,
+.anim3,
+.anim4 {
     transition: .1s linear;
 }
 
-.anim1:not(:first-of-type) {
+.anim1:not(:first-of-type),
+.anim2:not(:first-of-type),
+.anim3:not(:first-of-type),
+.anim4:not(:first-of-type) {
     opacity: 0;
 }
 

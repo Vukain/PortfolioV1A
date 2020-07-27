@@ -45,57 +45,56 @@ burger.addEventListener("click", () => {
     nav.classList.toggle("active");
 })
 const projects = document.querySelectorAll(".project");
-console.log(projects[0].offsetTop)
-const animImages1 = document.querySelectorAll(".anim1");
 
-let ia = 1;
+const animImages1 = document.querySelectorAll(".anim1");
+const animImages2 = document.querySelectorAll(".anim2");
+const animImages3 = document.querySelectorAll(".anim3");
+const animImages4 = document.querySelectorAll(".anim4");
+
 let quarter = projects[0].offsetHeight / 4
 
-let drawing1 = true
-window.addEventListener("scroll", () => {
-
-    if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 400) && drawing1) {
-        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 400;
-        animImages1[4].style.opacity = hei / quarter;
-
-        if (animImages1[4].style.opacity > 1) {
-            animImages1[4].style.opacity = 1;
-            animImages1[3].style.opacity = 0;
-            animImages1[2].style.opacity = 0;
-            animImages1[1].style.opacity = 0;
-            animImages1[0].style.opacity = 0;
-            drawing1 = false;
+function drawingQue(animImages, i) {
+    let drawing = true
+    if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 400) && drawing) {
+        let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 400;
+        animImages[4].style.opacity = hei / quarter;
+        animImages[3].style.opacity = 1
+        if (animImages[4].style.opacity > 1) {
+            animImages[4].style.opacity = 1;
+            animImages[3].style.opacity = 0;
+            animImages[2].style.opacity = 0;
+            animImages[1].style.opacity = 0;
+            animImages[0].style.opacity = 0;
+            console.log(drawing)
+            drawing = false;
+            console.log(drawing)
         }
-    } else if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 300) && drawing1) {
-        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 300;
-        animImages1[3].style.opacity = hei / quarter;
+    } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 300) && drawing) {
+        let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 300;
+        animImages[3].style.opacity = hei / quarter;
+        animImages[2].style.opacity = 1;
+        animImages[1].style.opacity = 0;
+        animImages[0].style.opacity = 0;
 
-    } else if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 200) && drawing1) {
-        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 200;
-        animImages1[2].style.opacity = hei / quarter;
+    } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 200) && drawing) {
+        let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 200;
+        animImages[2].style.opacity = hei / quarter;
+        animImages[1].style.opacity = 1
+        animImages[0].style.opacity = 0
 
-    } else if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 100) && drawing1) {
-        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 100;
-        animImages1[1].style.opacity = hei / quarter;
-
+    } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 100) && drawing) {
+        let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 100;
+        animImages[1].style.opacity = hei / quarter;
+        animImages[0].style.opacity = 1
     }
+}
 
+window.addEventListener("scroll", () => {
+    drawingQue(animImages1, 0);
+    drawingQue(animImages2, 1);
+    drawingQue(animImages3, 2);
+    drawingQue(animImages4, 3);
 
-
-
-
-
-
-    // if (window.scrollY + window.innerHeight > projects[0].offsetTop + 300) {
-    //     animImages1[2].style.opacity = 1
-    // }
-
-    // if (window.scrollY + window.innerHeight > projects[0].offsetTop + 400) {
-    //     animImages1[3].style.opacity = 1
-    // }
-    // if (window.scrollY + window.innerHeight > projects[0].offsetTop + 500) {
-    //     animImages1[4].style.opacity = 1
-    // }
 })
 
 // animImage.addEventListener("click", () => {
