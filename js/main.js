@@ -8,7 +8,15 @@ if (sUsrAg.indexOf("Firefox") > -1) {
 }
 
 const queGreen = "images/que_green.svg";
+const queGreenAnim = ["images/que_green_an1.svg", "images/que_green_an2.svg", "images/que_green_an3.svg", "images/que_green_an4.svg", "images/que_green_an5.svg"];
 const queYellow = "images/que_yellow.svg";
+const queYellowAnim = ["images/que_yellow_an1.svg", "images/que_yellow_an2.svg", "images/que_yellow_an3.svg", "images/que_yellow_an4.svg", "images/que_yellow_an5.svg"];
+
+const queUno1 = document.querySelectorAll(".que_uno1");
+const queUno2 = document.querySelectorAll(".que_uno2");
+const queUno3 = document.querySelectorAll(".que_uno3");
+const queUno4 = document.querySelectorAll(".que_uno4");
+const queUno5 = document.querySelectorAll(".que_uno5");
 
 const queUno = document.querySelectorAll(".que_uno");
 const queDos = document.querySelectorAll(".que_dos");
@@ -25,16 +33,42 @@ darkLight.addEventListener("click", () => {
     document.body.classList.toggle("light");
 
     if (document.body.className == "light") {
-        queUno.forEach(function (img) {
-            img.setAttribute("src", queYellow)
+        queUno1.forEach(function (img) {
+            img.setAttribute("src", queYellowAnim[0])
         })
+        queUno2.forEach(function (img) {
+            img.setAttribute("src", queYellowAnim[1])
+        })
+        queUno3.forEach(function (img) {
+            img.setAttribute("src", queYellowAnim[2])
+        })
+        queUno4.forEach(function (img) {
+            img.setAttribute("src", queYellowAnim[3])
+        })
+        queUno5.forEach(function (img) {
+            img.setAttribute("src", queYellowAnim[4])
+        })
+
         queDos.forEach(function (img) {
             img.setAttribute("src", queGreen)
         })
     } else {
-        queUno.forEach(function (img) {
-            img.setAttribute("src", queGreen)
+        queUno1.forEach(function (img) {
+            img.setAttribute("src", queGreenAnim[0])
         })
+        queUno2.forEach(function (img) {
+            img.setAttribute("src", queGreenAnim[1])
+        })
+        queUno3.forEach(function (img) {
+            img.setAttribute("src", queGreenAnim[2])
+        })
+        queUno4.forEach(function (img) {
+            img.setAttribute("src", queGreenAnim[3])
+        })
+        queUno5.forEach(function (img) {
+            img.setAttribute("src", queGreenAnim[4])
+        })
+
         queDos.forEach(function (img) {
             img.setAttribute("src", queYellow)
         })
@@ -54,7 +88,7 @@ const animImages4 = document.querySelectorAll(".anim4");
 let quarter = projects[0].offsetHeight / 4
 
 function drawingQue(animImages, i) {
-    let drawing = true
+    let drawing = true;
     if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 400) && drawing) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 400;
         animImages[4].style.opacity = hei / quarter;
@@ -65,9 +99,9 @@ function drawingQue(animImages, i) {
             animImages[2].style.opacity = 0;
             animImages[1].style.opacity = 0;
             animImages[0].style.opacity = 0;
-            console.log(drawing)
+
             drawing = false;
-            console.log(drawing)
+
         }
     } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 300) && drawing) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 300;
@@ -84,7 +118,9 @@ function drawingQue(animImages, i) {
 
     } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 100) && drawing) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 100;
+
         animImages[1].style.opacity = hei / quarter;
+        animImages[4].style.opacity = 0
         animImages[0].style.opacity = 1
     }
 }
