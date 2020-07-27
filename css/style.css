@@ -224,12 +224,12 @@ header h2 {
         transform: translateX(-50%);
     }
 
-    header img.logo {
-        animation: floater 17s linear infinite 1s both;
+    /* header img.logo {
+        animation: floater2 17s linear infinite 1s both;
         transform-origin: 50% 100%;
-    }
+    } */
 
-    @keyframes floater {
+    @keyframes floater2 {
 
         0% {
             transform: translate(-50%, 0) scale(1);
