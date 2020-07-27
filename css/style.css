@@ -233,12 +233,16 @@ header h2 {
         transform: translateX(-50%);
     }
 
+    header h2 {
+        margin-top: 10px;
+    }
+
     /* header img.logo {
         animation: floater2 17s linear infinite 1s both;
         transform-origin: 50% 100%;
     } */
 
-    @keyframes floater2 {
+    /* @keyframes floater2 {
 
         0% {
             transform: translate(-50%, 0) scale(1);
@@ -264,12 +268,8 @@ header h2 {
             transform: translate(-50%, 0) scale(1);
         }
 
-    }
+    } */
 
-
-    header h2 {
-        margin-top: 10px;
-    }
 }
 
 
@@ -395,7 +395,6 @@ nav div.extras i:hover {
         transform: translate(-50%, 11%) scaleX(1.2) rotate(-45deg);
         filter: blur(0px);
     }
-
 
     nav div.front div.ico {
         position: absolute;
@@ -547,7 +546,6 @@ nav div.extras i:hover {
         transition: .8s .4s linear;
     }
 
-
     nav div.front div.ico>div:nth-child(1) {
         width: 0px;
         margin: 0px auto;
@@ -630,7 +628,6 @@ nav div.extras i:hover {
     border-radius: 0 20px;
 }
 
-
 .portfolio .project:nth-of-type(even) {
     background-color: var(--semiColor1);
     flex-direction: row-reverse;
@@ -646,7 +643,6 @@ nav div.extras i:hover {
     margin-right: 0;
 }
 
-
 .portfolio .web {
     width: 50%;
     background-color: var(--backlighter);
@@ -654,7 +650,6 @@ nav div.extras i:hover {
     position: relative;
     border-radius: 20px;
 }
-
 
 .portfolio .web img {
     height: 60%;
@@ -664,7 +659,6 @@ nav div.extras i:hover {
     transform: translate(-50%, -50%);
     z-index: 15;
 }
-
 
 .portfolio .web::before {
     content: "";
@@ -788,7 +782,6 @@ section {
 .skill:nth-of-type(3) {
     background-color: var(--semiColor2);
 }
-
 
 .skill h2 {
     font-size: 26px;
@@ -1005,8 +998,6 @@ footer {
     transition: opacity .1s;
 }
 
-
-
 section .section_name {
     padding-top: 10vh;
     color: var(--semiColor2);
@@ -1139,6 +1130,4 @@ div.content_wrap {
         border-right: 66px solid var(--backlighter);
         border-bottom: 66px solid transparent;
     }
-
-
 }
