@@ -604,7 +604,7 @@ nav div.extras i:hover {
     position: relative;
     z-index: 0;
     /* overflow: hidden; */
-    transition: transform .5s;
+    transition: transform .5s ease-out;
 }
 
 .portfolio .project:hover {
@@ -755,7 +755,7 @@ section {
     border-radius: 20px;
     flex-grow: 1;
     color: var(--changingFont);
-    transition: .5s transform;
+    transition: .5s transform ease-out;
 }
 
 .skill:hover {
