@@ -136,21 +136,25 @@ function saturQue(saturImage, i) {
         saturImage.style.filter = `saturate(${hei * 1.05/ skillHeight})`
     }
 }
+const scrollEventor = () => {
+    drawingQue(animImages1, 0);
+    drawingQue(animImages2, 1);
+    drawingQue(animImages3, 2);
+    drawingQue(animImages4, 3);
 
-window.addEventListener("scroll", () => {
-    if (effToggle.className == "fab fa-linkedin enabled") {
-        drawingQue(animImages1, 0);
-        drawingQue(animImages2, 1);
-        drawingQue(animImages3, 2);
-        drawingQue(animImages4, 3);
+    saturQue(saturImages[0], 0);
+    saturQue(saturImages[1], 1);
+    saturQue(saturImages[2], 2);
+}
 
-        saturQue(saturImages[0], 0);
-        saturQue(saturImages[1], 1);
-        saturQue(saturImages[2], 2);
-    }
-})
+window.addEventListener("scroll", scrollEventor)
 
 const effToggle = document.querySelector(".fa-linkedin");
 effToggle.addEventListener("click", () => {
     effToggle.classList.toggle("enabled")
+    if (effToggle.className == "fab fa-linkedin enabled") {
+        window.addEventListener("scroll", scrollEventor);
+    } else {
+        window.removeEventListener("scroll", scrollEventor);
+    }
 })

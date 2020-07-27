@@ -988,6 +988,7 @@ footer {
 .anim3:not(:first-of-type),
 .anim4:not(:first-of-type) {
     opacity: 0;
+    transition: opacity .1s;
 }
 
 
