@@ -224,10 +224,45 @@ header h2 {
         transform: translateX(-50%);
     }
 
+    header img.logo {
+        animation: floater 17s linear infinite 1s both;
+        transform-origin: 50% 100%;
+    }
+
+    @keyframes floater {
+
+        0% {
+            transform: translate(-50%, 0) scale(1);
+        }
+
+        20% {
+            transform: translate(-50%, 6%) scale(1.02);
+        }
+
+        40% {
+            transform: translate(-50%, 1%) scale(1.01);
+        }
+
+        60% {
+            transform: translate(-50%, -2%) scale(.98);
+        }
+
+        80% {
+            transform: translate(-50%, 3%) scale(1.02);
+        }
+
+        100% {
+            transform: translate(-50%, 0) scale(1);
+        }
+
+    }
+
+
     header h2 {
         margin-top: 10px;
     }
 }
+
 
 @media (orientation: portrait) and (min-width: 600px) {
 
