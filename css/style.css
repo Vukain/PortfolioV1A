@@ -731,10 +731,6 @@ section {
     background-color: var(--semiColor2);
 }
 
-.skill h1 {
-    font-size: 26px;
-    margin-bottom: 15px;
-}
 
 .skill h2 {
     font-size: 26px;
@@ -789,29 +785,25 @@ section {
     border-radius: 20px;
 }
 
-.about_me h1 {
-
-    font-size: 26px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
 .about_me p {
     font-size: 24px;
 }
 
-.about_me p.author {
-    font-size: 14px;
-    margin-top: 12px;
+@media (orientation: portrait),
+(max-width: 600px) {
+
+    .about_me .wrap {
+        padding: 60px 40px;
+    }
+}
+
+.about_me p {
+    font-size: 18px;
 }
 
 /* contact */
 
 .contact h1 {
-
-    font-size: 26px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -916,7 +908,6 @@ body.light .contact button:hover {
     position: absolute;
     background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
     opacity: 0.6;
-    /* border-radius: 8px 0; */
     z-index: -10;
     transition: .4s;
     transform: rotate(-10deg);
@@ -940,32 +931,18 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
-    /* max-width: 1920px; */
 }
 
 /* extra */
 
-.anim {
-    transition: .4s ease-out;
+.anim1 {
+    transition: .1s linear;
 }
 
-.anim2s {
+.anim1:not(:first-of-type) {
     opacity: 0;
 }
 
-.anim3s {
-    opacity: 0;
-
-}
-
-.anim4s {
-    opacity: 0;
-
-}
-
-.anim5s {
-    opacity: 0;
-}
 
 
 section .section_name {
@@ -1063,6 +1040,10 @@ div.content_wrap {
 @media (orientation: portrait),
 (max-width: 600px) {
 
+    section .section_name {
+        font-size: 40px;
+    }
+
     .triangles::after {
         top: -2px;
         left: -30px;
@@ -1097,7 +1078,5 @@ div.content_wrap {
         border-bottom: 66px solid transparent;
     }
 
-    section .section_name {
-        font-size: 40px;
-    }
+
 }

@@ -44,10 +44,59 @@ darkLight.addEventListener("click", () => {
 burger.addEventListener("click", () => {
     nav.classList.toggle("active");
 })
+const projects = document.querySelectorAll(".project");
+console.log(projects[0].offsetTop)
+const animImages1 = document.querySelectorAll(".anim1");
 
-// const animImage = document.querySelector(".anim1");
+let ia = 1;
+let quarter = projects[0].offsetHeight / 4
 
-// let ia = 1;
+let drawing1 = true
+window.addEventListener("scroll", () => {
+
+    if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 400) && drawing1) {
+        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 400;
+        animImages1[4].style.opacity = hei / quarter;
+
+        if (animImages1[4].style.opacity > 1) {
+            animImages1[4].style.opacity = 1;
+            animImages1[3].style.opacity = 0;
+            animImages1[2].style.opacity = 0;
+            animImages1[1].style.opacity = 0;
+            animImages1[0].style.opacity = 0;
+            drawing1 = false;
+        }
+    } else if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 300) && drawing1) {
+        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 300;
+        animImages1[3].style.opacity = hei / quarter;
+
+    } else if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 200) && drawing1) {
+        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 200;
+        animImages1[2].style.opacity = hei / quarter;
+
+    } else if ((window.scrollY + window.innerHeight > projects[0].offsetTop + 100) && drawing1) {
+        let hei = window.scrollY + window.innerHeight - projects[0].offsetTop - 100;
+        animImages1[1].style.opacity = hei / quarter;
+
+    }
+
+
+
+
+
+
+
+    // if (window.scrollY + window.innerHeight > projects[0].offsetTop + 300) {
+    //     animImages1[2].style.opacity = 1
+    // }
+
+    // if (window.scrollY + window.innerHeight > projects[0].offsetTop + 400) {
+    //     animImages1[3].style.opacity = 1
+    // }
+    // if (window.scrollY + window.innerHeight > projects[0].offsetTop + 500) {
+    //     animImages1[4].style.opacity = 1
+    // }
+})
 
 // animImage.addEventListener("click", () => {
 //     ia += 1;
