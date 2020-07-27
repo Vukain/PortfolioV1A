@@ -87,9 +87,12 @@ const animImages4 = document.querySelectorAll(".anim4");
 
 let quarter = projects[0].offsetHeight / 4;
 
+let skillsPos = document.querySelector(".skills").offsetTop
+console.log(skillsPos)
+
 function drawingQue(animImages, i) {
-    let drawing = true;
-    if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 400) && drawing) {
+    let drawing = (window.scrollY + window.innerHeight < skillsPos + 200);
+    if (drawing && (window.scrollY + window.innerHeight > projects[i].offsetTop + 400)) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 400;
         animImages[4].style.opacity = hei / quarter;
         animImages[3].style.opacity = 1;
@@ -102,22 +105,21 @@ function drawingQue(animImages, i) {
 
             drawing = false;
         }
-    } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 300) && drawing) {
+    } else if (drawing && (window.scrollY + window.innerHeight > projects[i].offsetTop + 300)) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 300;
         animImages[3].style.opacity = hei / quarter;
         animImages[2].style.opacity = 1;
         animImages[1].style.opacity = 0;
         animImages[0].style.opacity = 0;
 
-    } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 200) && drawing) {
+    } else if (drawing && (window.scrollY + window.innerHeight > projects[i].offsetTop + 200)) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 200;
         animImages[2].style.opacity = hei / quarter;
         animImages[1].style.opacity = 1;
         animImages[0].style.opacity = 0;
 
-    } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 100) && drawing) {
+    } else if (drawing && (window.scrollY + window.innerHeight > projects[i].offsetTop + 100)) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 100;
-
         animImages[1].style.opacity = hei / quarter;
         animImages[4].style.opacity = 0;
         animImages[0].style.opacity = 1;
@@ -129,50 +131,27 @@ const saturImages = document.querySelectorAll(".satur");
 let skillHeight = skills[0].offsetHeight;
 
 function saturQue(saturImage, i) {
-    if (window.scrollY + window.innerHeight > skills[i].offsetTop + 200) {
+    if ((window.scrollY + window.innerHeight > skills[i].offsetTop + 200) && (window.scrollY + window.innerHeight < skills[i].offsetTop + 200 + skillHeight)) {
         let hei = window.scrollY + window.innerHeight - skills[i].offsetTop - 200;
-        saturImage.style.filter = `saturate(${hei / skillHeight})`
+        saturImage.style.filter = `saturate(${hei * 1.05/ skillHeight})`
     }
 }
 
-window.addEventListener("scroll", () => {
-    drawingQue(animImages1, 0);
-    drawingQue(animImages2, 1);
-    drawingQue(animImages3, 2);
-    drawingQue(animImages4, 3);
 
-    saturQue(saturImages[0], 0);
-    saturQue(saturImages[1], 1);
-    saturQue(saturImages[2], 2);
+const effToggle = document.querySelector(".fa-linkedin");
+effToggle.addEventListener("click", () => {
+    effToggle.classList.toggle("enabled")
 })
 
-// animImage.addEventListener("click", () => {
-//     ia += 1;
-//     animImage.setAttribute("src", "images/que_green_an" + ia + ".svg");
+window.addEventListener("scroll", () => {
+    if (effToggle.className == "fab fa-linkedin enabled") {
+        drawingQue(animImages1, 0);
+        drawingQue(animImages2, 1);
+        drawingQue(animImages3, 2);
+        drawingQue(animImages4, 3);
 
-//     if (ia == 5) {
-//         ia = 0
-//     }
-// })
-
-// const animImages = document.querySelector(".anim");
-// console.log(animImages)
-// let iam = 1;
-
-// animImages.addEventListener("click", () => {
-//     iam += 1;
-//     console.log("click" + iam);
-//     if (iam >= 3) {}
-//     document.querySelector(`.anim${iam}s`).style.opacity = 1;
-//     document.querySelector(`.anim${iam}s`).style.filter = "blur(0px)";
-//     setTimeout(() => {
-//         document.querySelector(`.anim${iam - 1}s`).style.opacity = 0;
-//         document.querySelector(`.anim${iam - 1}s`).style.filter = "blur(0px)"
-//         if (iam == 5) {
-//             iam = 0;
-//         };
-//     }, 400)
-
-
-
-// })
+        saturQue(saturImages[0], 0);
+        saturQue(saturImages[1], 1);
+        saturQue(saturImages[2], 2);
+    }
+})
