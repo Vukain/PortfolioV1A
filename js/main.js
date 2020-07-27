@@ -137,12 +137,6 @@ function saturQue(saturImage, i) {
     }
 }
 
-
-const effToggle = document.querySelector(".fa-linkedin");
-effToggle.addEventListener("click", () => {
-    effToggle.classList.toggle("enabled")
-})
-
 window.addEventListener("scroll", () => {
     if (effToggle.className == "fab fa-linkedin enabled") {
         drawingQue(animImages1, 0);
@@ -154,4 +148,9 @@ window.addEventListener("scroll", () => {
         saturQue(saturImages[1], 1);
         saturQue(saturImages[2], 2);
     }
+})
+
+const effToggle = document.querySelector(".fa-linkedin");
+effToggle.addEventListener("click", () => {
+    effToggle.classList.toggle("enabled")
 })
