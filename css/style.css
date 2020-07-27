@@ -935,12 +935,9 @@ footer {
 
 /* extra */
 
-/* .anim1,
-.anim2,
-.anim3,
-.anim4 {
-    transition: .1s linear;
-} */
+.que_dos {
+    filter: saturate(0);
+}
 
 .anim1:not(:first-of-type),
 .anim2:not(:first-of-type),

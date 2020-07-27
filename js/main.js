@@ -85,14 +85,14 @@ const animImages2 = document.querySelectorAll(".anim2");
 const animImages3 = document.querySelectorAll(".anim3");
 const animImages4 = document.querySelectorAll(".anim4");
 
-let quarter = projects[0].offsetHeight / 4
+let quarter = projects[0].offsetHeight / 4;
 
 function drawingQue(animImages, i) {
     let drawing = true;
     if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 400) && drawing) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 400;
         animImages[4].style.opacity = hei / quarter;
-        animImages[3].style.opacity = 1
+        animImages[3].style.opacity = 1;
         if (animImages[4].style.opacity > 1) {
             animImages[4].style.opacity = 1;
             animImages[3].style.opacity = 0;
@@ -101,7 +101,6 @@ function drawingQue(animImages, i) {
             animImages[0].style.opacity = 0;
 
             drawing = false;
-
         }
     } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 300) && drawing) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 300;
@@ -113,15 +112,26 @@ function drawingQue(animImages, i) {
     } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 200) && drawing) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 200;
         animImages[2].style.opacity = hei / quarter;
-        animImages[1].style.opacity = 1
-        animImages[0].style.opacity = 0
+        animImages[1].style.opacity = 1;
+        animImages[0].style.opacity = 0;
 
     } else if ((window.scrollY + window.innerHeight > projects[i].offsetTop + 100) && drawing) {
         let hei = window.scrollY + window.innerHeight - projects[i].offsetTop - 100;
 
         animImages[1].style.opacity = hei / quarter;
-        animImages[4].style.opacity = 0
-        animImages[0].style.opacity = 1
+        animImages[4].style.opacity = 0;
+        animImages[0].style.opacity = 1;
+    }
+}
+
+const skills = document.querySelectorAll(".skill");
+const saturImages = document.querySelectorAll(".satur");
+let skillHeight = skills[0].offsetHeight;
+
+function saturQue(saturImage, i) {
+    if (window.scrollY + window.innerHeight > skills[i].offsetTop + 200) {
+        let hei = window.scrollY + window.innerHeight - skills[i].offsetTop - 200;
+        saturImage.style.filter = `saturate(${hei / skillHeight})`
     }
 }
 
@@ -131,6 +141,9 @@ window.addEventListener("scroll", () => {
     drawingQue(animImages3, 2);
     drawingQue(animImages4, 3);
 
+    saturQue(saturImages[0], 0);
+    saturQue(saturImages[1], 1);
+    saturQue(saturImages[2], 2);
 })
 
 // animImage.addEventListener("click", () => {
