@@ -44,3 +44,38 @@ darkLight.addEventListener("click", () => {
 burger.addEventListener("click", () => {
     nav.classList.toggle("active");
 })
+
+// const animImage = document.querySelector(".anim1");
+
+// let ia = 1;
+
+// animImage.addEventListener("click", () => {
+//     ia += 1;
+//     animImage.setAttribute("src", "images/que_green_an" + ia + ".svg");
+
+//     if (ia == 5) {
+//         ia = 0
+//     }
+// })
+
+// const animImages = document.querySelector(".anim");
+// console.log(animImages)
+// let iam = 1;
+
+// animImages.addEventListener("click", () => {
+//     iam += 1;
+//     console.log("click" + iam);
+//     if (iam >= 3) {}
+//     document.querySelector(`.anim${iam}s`).style.opacity = 1;
+//     document.querySelector(`.anim${iam}s`).style.filter = "blur(0px)";
+//     setTimeout(() => {
+//         document.querySelector(`.anim${iam - 1}s`).style.opacity = 0;
+//         document.querySelector(`.anim${iam - 1}s`).style.filter = "blur(0px)"
+//         if (iam == 5) {
+//             iam = 0;
+//         };
+//     }, 400)
+
+
+
+// })

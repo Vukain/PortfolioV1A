@@ -943,7 +943,30 @@ footer {
     /* max-width: 1920px; */
 }
 
-/* extras */
+/* extra */
+
+.anim {
+    transition: .4s ease-out;
+}
+
+.anim2s {
+    opacity: 0;
+}
+
+.anim3s {
+    opacity: 0;
+
+}
+
+.anim4s {
+    opacity: 0;
+
+}
+
+.anim5s {
+    opacity: 0;
+}
+
 
 section .section_name {
     padding-top: 10vh;
