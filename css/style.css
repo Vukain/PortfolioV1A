@@ -191,6 +191,15 @@ header h2 {
     }
 }
 
+@media (orientation: landscape) and (min-width: 2200px) {
+
+    header div.welcome {
+        left: 12%;
+        bottom: 32%;
+        font-size: 100px;
+    }
+}
+
 @media (orientation: portrait),
 (max-width: 600px) {
 
@@ -286,9 +295,6 @@ nav {
     transition: .5s;
 }
 
-
-
-
 nav ul {
     position: absolute;
     top: 50%;
@@ -308,7 +314,6 @@ nav ul {
 
 nav ul a {
     color: var(--changingFont);
-
     text-decoration: none;
     padding-bottom: 3px;
     padding-left: 10px;
@@ -316,8 +321,6 @@ nav ul a {
     transition: .2s;
     letter-spacing: .1em;
 }
-
-
 
 nav ul a:hover {
     color: var(--semiColor3);
@@ -482,6 +485,17 @@ nav div.extras i:hover {
 
     nav div.front div.ico {
         top: 32.6vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 2200px) {
+
+    nav ul {
+        font-size: 3.2em;
+    }
+
+    nav div.extras i {
+        font-size: 2.6em;
     }
 }
 
