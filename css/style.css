@@ -214,8 +214,8 @@ header h2 {
 
     header div.welcome {
         left: unset;
-        right: 9%;
-        bottom: 20%;
+        right: 12%;
+        bottom: 24%;
         font-size: 48px;
         font-weight: bold;
         text-align: right;
@@ -270,6 +270,13 @@ header h2 {
 
     } */
 
+}
+
+@media (orientation: portrait) and (max-width: 340px) {
+
+    header div.welcome {
+        font-size: 40px;
+    }
 }
 
 
