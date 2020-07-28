@@ -205,7 +205,9 @@ header h2 {
 
     header img.port {
         display: unset;
-        height: 100vh;
+        height: 100%;
+        width: 100%;
+        bottom: -2px;
     }
 
     header img.land {
