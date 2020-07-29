@@ -21,7 +21,7 @@ const queUno5 = document.querySelectorAll(".que_uno5");
 const queUno = document.querySelectorAll(".que_uno");
 const queDos = document.querySelectorAll(".que_dos");
 
-const darkLight = document.querySelector(".fa-adjust");
+const darkLight = document.querySelector(".fa-moon");
 const nav = document.querySelector("nav");
 const burger = document.querySelector(".hamburger");
 
@@ -144,11 +144,13 @@ const scrollEventor = () => {
 
 window.addEventListener("scroll", scrollEventor)
 
+
+const borderToggle = document.querySelector(".fa-adjust")
 const borderos = document.querySelector(".land");
 const borders = ["images/border.svg", "images/border_lgt.svg"];
 let bord = 1;
 
-borderos.addEventListener("click", () => {
+borderToggle.addEventListener("click", () => {
     borderos.setAttribute("src", borders[bord])
     bord++
     if (bord == 2) {
