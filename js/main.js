@@ -25,10 +25,6 @@ const darkLight = document.querySelector(".fa-adjust");
 const nav = document.querySelector("nav");
 const burger = document.querySelector(".hamburger");
 
-
-console.log(nav)
-console.log(burger)
-
 darkLight.addEventListener("click", () => {
     document.body.classList.toggle("light");
 
@@ -88,7 +84,6 @@ const animImages4 = document.querySelectorAll(".anim4");
 let quarter = projects[0].offsetHeight / 4;
 
 let skillsPos = document.querySelector(".skills").offsetTop
-console.log(skillsPos)
 
 function drawingQue(animImages, i) {
     let drawing = (window.scrollY + window.innerHeight < skillsPos + 200);
