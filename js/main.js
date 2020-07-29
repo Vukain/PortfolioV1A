@@ -144,7 +144,20 @@ const scrollEventor = () => {
 
 window.addEventListener("scroll", scrollEventor)
 
+const borderos = document.querySelector(".land");
+const borders = ["images/border.svg", "images/border_lgt.svg"];
+let bord = 1;
+
+borderos.addEventListener("click", () => {
+    borderos.setAttribute("src", borders[bord])
+    bord++
+    if (bord == 2) {
+        bord = 0
+    }
+})
+
 const effToggle = document.querySelector(".fa-linkedin");
+
 effToggle.addEventListener("click", () => {
     effToggle.classList.toggle("enabled")
     if (effToggle.className == "fab fa-linkedin enabled") {
