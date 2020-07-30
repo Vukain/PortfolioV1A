@@ -203,11 +203,24 @@ header h2 {
 @media (orientation: portrait),
 (max-width: 600px) {
 
-    header img.port {
+    header img.port.botrter {
         display: unset;
-        height: 100%;
         width: 100%;
+        height: auto;
         bottom: -2px;
+        left: -2px;
+        right: unset;
+        top: unset;
+    }
+
+    header img.port.right {
+        display: unset;
+        height: 108%;
+        width: auto;
+        top: 0;
+        right: -2px;
+        left: unset;
+        bottom: unset;
     }
 
     header img.land {
@@ -483,6 +496,19 @@ nav div.extras i:hover {
     nav:hover div.front div.ico>div:nth-child(4) {
         border-top: 0px solid var(--semiColor2);
     }
+}
+
+.adju {
+    display: none;
+}
+
+.st0 {
+    fill: #ce0a3b;
+}
+
+svg.imgor {
+    width: auto;
+    height: 100px;
 }
 
 @media (orientation: landscape) and (min-width: 1599px) {
