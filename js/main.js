@@ -147,11 +147,19 @@ window.addEventListener("scroll", scrollEventor)
 
 const borderToggle = document.querySelector(".fa-adjust")
 const borderos = document.querySelector(".land");
-const borders = ["images/border.svg", "images/border_lgt.svg"];
+const borderPortBot = document.querySelector(".port.bot");
+const borderPortRight = document.querySelector(".port.right");
+
+const borders = [
+    ["images/border.svg", "images/border_ver_bot_dark.svg", "images/border_ver_right_dark.svg"],
+    ["images/border_lgt.svg", "images/border_ver_bot_light.svg", "images/border_ver_right_light.svg"]
+];
 let bord = 1;
 
 borderToggle.addEventListener("click", () => {
-    borderos.setAttribute("src", borders[bord])
+    borderos.setAttribute("src", borders[bord][0])
+    borderPortBot.setAttribute("src", borders[bord][1])
+    borderPortRight.setAttribute("src", borders[bord][2])
     bord++
     if (bord == 2) {
         bord = 0

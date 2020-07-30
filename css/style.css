@@ -203,7 +203,7 @@ header h2 {
 @media (orientation: portrait),
 (max-width: 600px) {
 
-    header img.port.botrter {
+    header img.port.bot {
         display: unset;
         width: 100%;
         height: auto;
