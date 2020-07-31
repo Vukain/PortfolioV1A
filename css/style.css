@@ -564,8 +564,8 @@ nav div.extras .imgor {
 
     nav div.extras {
         position: absolute;
-        top: calc(33.5vh + 3px);
-        bottom: 6px;
+        top: 33.5vh;
+        /* bottom: 6px; */
         left: 2vh;
         transform: translateY(0);
     }
