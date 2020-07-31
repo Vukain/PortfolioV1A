@@ -2,8 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
 }
+
 
 body {
     --backdarker2: #292929;
@@ -391,6 +392,23 @@ nav div.extras i:hover {
     color: var(--mainColor2);
 }
 
+nav div.extras .st0 {
+    fill: var(--changingFont);
+    transition: fill .3s;
+}
+
+nav div.extras .imgor:hover .st0 {
+    fill: var(--mainColor2);
+}
+
+nav div.extras .imgor {
+    width: auto;
+    height: 28px;
+    margin: 2vh;
+    display: block;
+    cursor: pointer;
+}
+
 @media (orientation: landscape) {
 
     nav:hover ul {
@@ -498,18 +516,7 @@ nav div.extras i:hover {
     }
 }
 
-.adju {
-    display: none;
-}
 
-.st0 {
-    fill: #ce0a3b;
-}
-
-svg.imgor {
-    width: auto;
-    height: 100px;
-}
 
 @media (orientation: landscape) and (min-width: 1599px) {
 
@@ -569,6 +576,13 @@ svg.imgor {
         margin: 0 6px;
     }
 
+    nav div.extras .imgor {
+        display: inline-block;
+        margin: 0 6px;
+        height: 26px;
+        transform: translateY(9%);
+    }
+
     nav div.front div.ico {
         top: 33.5vh;
         right: 6%;
@@ -578,7 +592,7 @@ svg.imgor {
     }
 
     nav div.front div.ico>div {
-        transition: .8s .4s linear;
+        transition: .6s .4s linear;
     }
 
     nav div.front div.ico>div:nth-child(1) {

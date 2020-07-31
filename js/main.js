@@ -21,7 +21,7 @@ const queUno5 = document.querySelectorAll(".que_uno5");
 const queUno = document.querySelectorAll(".que_uno");
 const queDos = document.querySelectorAll(".que_dos");
 
-const darkLight = document.querySelector(".fa-moon");
+const darkLight = document.querySelector(".imgor.diam");
 const nav = document.querySelector("nav");
 const burger = document.querySelector(".hamburger");
 
@@ -145,7 +145,7 @@ const scrollEventor = () => {
 window.addEventListener("scroll", scrollEventor)
 
 
-const borderToggle = document.querySelector(".fa-adjust")
+const borderToggle = document.querySelector(".imgor.bord");
 const borderos = document.querySelector(".land");
 const borderPortBot = document.querySelector(".port.bot");
 const borderPortRight = document.querySelector(".port.right");
@@ -166,11 +166,11 @@ borderToggle.addEventListener("click", () => {
     }
 })
 
-const effToggle = document.querySelector(".fa-linkedin");
+const effToggle = document.querySelector(".imgor.sun");
 
 effToggle.addEventListener("click", () => {
     effToggle.classList.toggle("enabled")
-    if (effToggle.className == "fab fa-linkedin enabled") {
+    if (effToggle.className == "imgor sun enabled") {
         window.addEventListener("scroll", scrollEventor);
     } else {
         window.removeEventListener("scroll", scrollEventor);
