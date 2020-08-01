@@ -21,6 +21,8 @@ const queUno5 = document.querySelectorAll(".que_uno5");
 const queUno = document.querySelectorAll(".que_uno");
 const queDos = document.querySelectorAll(".que_dos");
 
+const logo = document.querySelector(".logo")
+
 const darkLight = document.querySelector(".fa-moon");
 const nav = document.querySelector("nav");
 const burger = document.querySelector(".hamburger");
@@ -48,6 +50,7 @@ darkLight.addEventListener("click", () => {
         queDos.forEach(function (img) {
             img.setAttribute("src", queGreen)
         })
+        logo.setAttribute("src", "images/logo_dark.svg")
     } else {
         queUno1.forEach(function (img) {
             img.setAttribute("src", queGreenAnim[0])
@@ -67,7 +70,9 @@ darkLight.addEventListener("click", () => {
 
         queDos.forEach(function (img) {
             img.setAttribute("src", queYellow)
+
         })
+        logo.setAttribute("src", "images/logo_light.svg")
     }
 })
 
