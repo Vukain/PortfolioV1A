@@ -538,6 +538,10 @@ nav div.extras .imgor {
     nav div.extras i {
         font-size: 2.6em;
     }
+
+    nav div.extras .imgor {
+        height: 38px;
+    }
 }
 
 @media (orientation: portrait),
