@@ -25,6 +25,8 @@ const darkLight = document.querySelector(".imgor.sun");
 const nav = document.querySelector("nav");
 const burger = document.querySelector(".hamburger");
 
+
+const logo = document.querySelector(".logo")
 darkLight.addEventListener("click", () => {
     document.body.classList.toggle("light");
 
