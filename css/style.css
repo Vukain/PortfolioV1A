@@ -247,7 +247,7 @@ header h2 {
         left: 0;
         bottom: unset;
         right: unset;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scaleX(-1);
     }
 
     header h2 {
