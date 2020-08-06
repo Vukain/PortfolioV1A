@@ -129,7 +129,7 @@ function drawingQue(animImages, i) {
 const skills = document.querySelectorAll(".skill");
 const saturImages = document.querySelectorAll(".satur");
 let skillHeight = skills[0].offsetHeight;
-let skillQuart = skillHeight / 2
+let skillQuart = skillHeight / 2.6
 
 function saturQue(saturImage, i) {
     if ((window.scrollY + window.innerHeight > skills[i].offsetTop + skillQuart) && (window.scrollY + window.innerHeight < skills[i].offsetTop + skillQuart + skillHeight)) {
