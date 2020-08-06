@@ -87,7 +87,7 @@ const animImages3 = document.querySelectorAll(".anim3");
 const animImages4 = document.querySelectorAll(".anim4");
 
 let quarter = projects[0].offsetHeight / 4;
-
+console.log(projects[0].offsetHeight)
 let skillsPos = document.querySelector(".skills").offsetTop
 
 function drawingQue(animImages, i) {
@@ -129,11 +129,12 @@ function drawingQue(animImages, i) {
 const skills = document.querySelectorAll(".skill");
 const saturImages = document.querySelectorAll(".satur");
 let skillHeight = skills[0].offsetHeight;
+let skillQuart = skillHeight / 2
 
 function saturQue(saturImage, i) {
-    if ((window.scrollY + window.innerHeight > skills[i].offsetTop + 200) && (window.scrollY + window.innerHeight < skills[i].offsetTop + 200 + skillHeight)) {
-        let hei = window.scrollY + window.innerHeight - skills[i].offsetTop - 200;
-        saturImage.style.filter = `saturate(${hei * 1.05/ skillHeight})`
+    if ((window.scrollY + window.innerHeight > skills[i].offsetTop + skillQuart) && (window.scrollY + window.innerHeight < skills[i].offsetTop + skillQuart + skillHeight)) {
+        let hei = window.scrollY + window.innerHeight - skills[i].offsetTop - skillQuart;
+        saturImage.style.filter = `saturate(${hei * 1.02/ skillHeight})`
     }
 }
 const scrollEventor = () => {

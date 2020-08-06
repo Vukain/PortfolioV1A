@@ -703,6 +703,7 @@ nav div.extras .imgor {
     height: 500px;
     position: relative;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .portfolio .web img {
@@ -726,12 +727,86 @@ nav div.extras .imgor {
     opacity: 1;
     top: 50%;
     left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.portfolio .web:hover::before {
+
     transform: translate(-50%, -50%);
 }
 
 body.light .portfolio .web::before {
     background-image: url("../images/port_bg_light.svg");
 }
+
+
+.portfolio .project .web a.live {
+    position: absolute;
+    bottom: -10vh;
+    right: -10vh;
+}
+
+.portfolio .project .web a.gith {
+    position: absolute;
+    bottom: -10vh;
+    left: -10vh;
+}
+
+.portfolio .project .web a div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: var(--backlighter);
+    transition: 1s ease;
+}
+
+.portfolio .project .web a.gith div {
+    bottom: 0;
+    left: 0;
+}
+
+
+.portfolio .project .web:hover a div {
+    width: 22vh;
+    height: 22vh;
+}
+
+.portfolio .project .web a div p {
+    position: absolute;
+
+    opacity: 0;
+    font-size: 1.2em;
+    color: var(--changingFont);
+    text-decoration: none;
+    transition: opacity 1s .5s, color .3s;
+}
+
+.portfolio .project .web a div:hover p {
+    color: var(--semiColor2);
+}
+
+.portfolio .project .web a.live div p {
+    top: 20%;
+    left: 15%;
+    transform: rotate(-45deg);
+}
+
+.portfolio .project .web a.gith div p {
+    top: 20%;
+    right: 10%;
+    transform: rotate(45deg);
+}
+
+.portfolio .project .web:hover a div p {
+    opacity: 1;
+}
+
+
 
 .portfolio .about {
     color: var(--changingFont);
@@ -793,6 +868,11 @@ body.light .portfolio .web::before {
         width: calc(100% - 20px);
         height: calc(100% - 20px);
     }
+
+    .portfolio .project .web a div p {
+        font-size: 1em;
+    }
+
 }
 
 /* section skills*/
