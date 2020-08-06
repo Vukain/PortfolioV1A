@@ -545,6 +545,20 @@ nav div.extras .imgor {
     }
 }
 
+@media (min-width: 3200px) {
+    nav ul {
+        font-size: 4.6em;
+    }
+
+    nav div.extras i {
+        font-size: 4em;
+    }
+
+    nav div.extras .imgor {
+        height: 58px;
+    }
+}
+
 @media (orientation: portrait),
 (max-width: 600px) {
 
