@@ -172,6 +172,12 @@ borderToggle.addEventListener("click", () => {
     }
 })
 
+
+const but = document.querySelector("button")
+
+but.addEventListener("click", (e) => {
+    e.preventDefault()
+})
 // const effToggle = document.querySelector(".imgor.contr");
 
 // effToggle.addEventListener("click", () => {
