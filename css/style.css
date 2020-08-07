@@ -812,6 +812,10 @@ body.light .portfolio .web::before {
     color: var(--semiColor2);
 }
 
+.portfolio .project:nth-of-type(even) .web a div:hover p{
+    color: var(--semiColor1);
+}
+
 .portfolio .project .web a.live div p {
     top: 12%;
     left: 50%;
