@@ -324,7 +324,7 @@ nav ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
-    z-index: 999999;
+    z-index: 9999;
     opacity: 0;
     transition: opacity 2s linear;
     list-style: none;
@@ -358,7 +358,7 @@ nav div.back {
     background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
     filter: blur(0px);
 }
-
+ 
 nav div.front {
     margin-left: -6px;
     background-color: var(--backdarker2);
@@ -374,6 +374,7 @@ nav div.extras {
     top: 50%;
     left: 4vh;
     transform: translateY(-60%);
+    opacity: 0;
 }
 
 nav div.extras a {
@@ -423,6 +424,16 @@ nav div.extras .imgor {
     nav:hover>div.back {
         top: 0;
         filter: blur(6px);
+    }
+
+    nav div.extras {
+        left: 2vh;
+        transition: 1s;
+    }
+
+    nav:hover div.extras {
+        opacity: 1;
+        left: 6vh;
     }
 
     nav div.back div.arrow {
@@ -584,6 +595,7 @@ nav div.extras .imgor {
     nav div.extras {
         position: absolute;
         top: 33.5vh;
+        opacity: 1;
         /* bottom: 6px; */
         left: 2vh;
         transform: translateY(0);
@@ -761,9 +773,10 @@ body.light .portfolio .web::before {
     right: -10vh;
 }
 
-.portfolio .project .web a.gith {
+.portfolio .project:nth-of-type(even) .web a.live {
     position: absolute;
     bottom: -10vh;
+    right: unset;
     left: -10vh;
 }
 
@@ -777,6 +790,13 @@ body.light .portfolio .web::before {
     border-radius: 50%;
     background-color: var(--backlighter);
     transition: 1s ease;
+    transform: rotate(-45deg);
+}
+
+.portfolio .project:nth-of-type(even) .web a div{
+    bottom: 0;
+    left: 0;
+    transform: rotate(45deg);
 }
 
 .portfolio .project .web a.gith div {
@@ -804,10 +824,15 @@ body.light .portfolio .web::before {
     color: var(--semiColor2);
 }
 
+.portfolio .project:nth-of-type(even) .web a div:hover p{
+    color: var(--semiColor1);
+}
+
 .portfolio .project .web a.live div p {
-    top: 20%;
-    left: 15%;
-    transform: rotate(-45deg);
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
 
 .portfolio .project .web a.gith div p {
@@ -817,10 +842,24 @@ body.light .portfolio .web::before {
 }
 
 .portfolio .project .web:hover a div p {
-    opacity: 1;
+    animation: opac 1.4s ease both;
 }
 
 
+@keyframes opac {
+    0% {
+        opacity: 0;
+        top: 20%;
+    }
+    50% {
+        opacity: 0;
+        top: 20%;
+    }
+    100% {
+        opacity: 1;
+        top: 12%;
+    }
+}
 
 .portfolio .about {
     color: var(--changingFont);
