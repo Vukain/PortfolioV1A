@@ -324,7 +324,7 @@ nav ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
-    z-index: 999999;
+    z-index: 9999;
     opacity: 0;
     transition: opacity 2s linear;
     list-style: none;
@@ -358,7 +358,7 @@ nav div.back {
     background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
     filter: blur(0px);
 }
-
+ 
 nav div.front {
     margin-left: -6px;
     background-color: var(--backdarker2);
@@ -374,6 +374,7 @@ nav div.extras {
     top: 50%;
     left: 4vh;
     transform: translateY(-60%);
+    opacity: 0;
 }
 
 nav div.extras a {
@@ -423,6 +424,16 @@ nav div.extras .imgor {
     nav:hover>div.back {
         top: 0;
         filter: blur(6px);
+    }
+
+    nav div.extras {
+        left: 2vh;
+        transition: 1s;
+    }
+
+    nav:hover div.extras {
+        opacity: 1;
+        left: 6vh;
     }
 
     nav div.back div.arrow {
@@ -584,6 +595,7 @@ nav div.extras .imgor {
     nav div.extras {
         position: absolute;
         top: 33.5vh;
+        opacity: 1;
         /* bottom: 6px; */
         left: 2vh;
         transform: translateY(0);
