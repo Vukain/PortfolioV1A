@@ -193,12 +193,30 @@ header h2 {
     }
 }
 
+@media (orientation: landscape) and (min-width: 1599px) {
+
+    header div.welcome {
+        left: 12%;
+        bottom: 32%;
+        font-size: 90px;
+    }
+}
+
 @media (orientation: landscape) and (min-width: 2200px) {
 
     header div.welcome {
         left: 12%;
         bottom: 32%;
-        font-size: 100px;
+        font-size: 120px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 3200px) {
+
+    header div.welcome {
+        left: 10%;
+        bottom: 22%;
+        font-size: 140px;
     }
 }
 
@@ -358,7 +376,7 @@ nav div.back {
     background-image: linear-gradient(-45deg, var(--mainColor1), var(--mainColor2));
     filter: blur(0px);
 }
- 
+
 nav div.front {
     margin-left: -6px;
     background-color: var(--backdarker2);
@@ -533,18 +551,11 @@ nav div.extras .imgor {
 @media (orientation: landscape) and (min-width: 1599px) {
 
     nav ul {
-        font-size: 2.4em;
+        font-size: 2.6em;
     }
 
     nav div.front div.ico {
         top: 32.6vh;
-    }
-}
-
-@media (orientation: landscape) and (min-width: 2200px) {
-
-    nav ul {
-        font-size: 3.2em;
     }
 
     nav div.extras i {
@@ -552,7 +563,47 @@ nav div.extras .imgor {
     }
 
     nav div.extras .imgor {
-        height: 38px;
+        height: 37px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 2200px) {
+
+    nav ul {
+        font-size: 3.8em;
+    }
+
+    nav div.extras i {
+        font-size: 3.8em;
+    }
+
+    nav div.extras .imgor {
+        height: 56px;
+    }
+
+    nav div.front div.ico>div:nth-child(1) {
+        margin: 0px auto;
+    }
+
+    nav div.front div.ico>div:nth-child(2) {
+        margin: 6px auto;
+
+    }
+
+    nav div.front div.ico>div:nth-child(3) {
+        margin: 6px auto;
+    }
+
+    nav div.front div.ico>div:nth-child(4) {
+        margin: 6px auto;
+    }
+
+    nav.active div.front div.ico>div:nth-child(1) {
+        margin: 6px auto;
+    }
+
+    nav.active div.front div.ico>div:nth-child(2) {
+        margin: 6px auto;
     }
 }
 
@@ -562,11 +613,36 @@ nav div.extras .imgor {
     }
 
     nav div.extras i {
-        font-size: 4em;
+        font-size: 4.6em;
     }
 
     nav div.extras .imgor {
-        height: 58px;
+        height: 66px;
+    }
+
+    nav div.front div.ico>div:nth-child(1) {
+        margin: 0px auto;
+    }
+
+    nav div.front div.ico>div:nth-child(2) {
+        margin: 12px auto;
+
+    }
+
+    nav div.front div.ico>div:nth-child(3) {
+        margin: 12px auto;
+    }
+
+    nav div.front div.ico>div:nth-child(4) {
+        margin: 12px auto;
+    }
+
+    nav.active div.front div.ico>div:nth-child(1) {
+        margin: 12px auto;
+    }
+
+    nav.active div.front div.ico>div:nth-child(2) {
+        margin: 12px auto;
     }
 }
 
@@ -793,7 +869,7 @@ body.light .portfolio .web::before {
     transform: rotate(-45deg);
 }
 
-.portfolio .project:nth-of-type(even) .web a div{
+.portfolio .project:nth-of-type(even) .web a div {
     bottom: 0;
     left: 0;
     transform: rotate(45deg);
@@ -824,7 +900,7 @@ body.light .portfolio .web::before {
     color: var(--semiColor2);
 }
 
-.portfolio .project:nth-of-type(even) .web a div:hover p{
+.portfolio .project:nth-of-type(even) .web a div:hover p {
     color: var(--semiColor1);
 }
 
@@ -851,13 +927,15 @@ body.light .portfolio .web::before {
         opacity: 0;
         top: 20%;
     }
+
     50% {
         opacity: 0;
         top: 20%;
     }
+
     100% {
         opacity: 1;
-        top: 12%;
+        top: 14%;
     }
 }
 
@@ -1078,17 +1156,17 @@ section {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
-
     height: 40px;
     padding: 5px;
     background-color: var(--inputBg);
-    text-transform: uppercase;
+
 }
 
 .contact input {
-    font-size: 12px;
+    font-size: 14px;
     border: 2px solid var(--semiColor1);
     transition: .2s;
+    color: #292929;
 }
 
 .contact input:focus {
@@ -1098,9 +1176,11 @@ section {
 }
 
 .contact textarea {
+    font-size: 14px;
     height: 120px;
     border: 2px solid var(--semiColor1);
     transition: .2s;
+    color: #292929;
 }
 
 .contact textarea:focus {
@@ -1118,7 +1198,6 @@ section {
     line-height: 36px;
     border-radius: 8px 0;
     background-color: var(--buttonBg);
-    /* background-image: linear-gradient(-45deg, var(--backdarker), var(--backlighter)); */
     background-size: 200% 100%;
     color: var(--changingFont);
     border: 2px solid var(--mainColor2);
@@ -1127,6 +1206,7 @@ section {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    text-transform: uppercase;
 }
 
 .contact button:hover {
