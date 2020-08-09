@@ -1317,7 +1317,7 @@ section .section_name {
     border-top: 100px solid transparent;
 }
 
-.trianglesRev::after {
+.triangles_rev::after {
     content: "";
     position: absolute;
     z-index: 10;
@@ -1328,7 +1328,7 @@ section .section_name {
     border-bottom: 100px solid transparent;
 }
 
-.trianglesRev::before {
+.triangles_rev::before {
     content: "";
     position: absolute;
     z-index: 10;
@@ -1339,7 +1339,7 @@ section .section_name {
     border-top: 100px solid transparent;
 }
 
-.trianglesLightLeft::after {
+.triangles_light_left::after {
     content: "";
     position: absolute;
     z-index: 3;
@@ -1350,7 +1350,7 @@ section .section_name {
     border-bottom: 100px solid transparent;
 }
 
-.trianglesLightRight::after {
+.triangles_light_right::after {
     content: "";
     position: absolute;
     z-index: 3;
@@ -1395,24 +1395,24 @@ div.content_wrap {
         bottom: -2px;
     }
 
-    .trianglesRev::after {
+    .triangles_rev::after {
         top: -2px;
         right: -30px;
     }
 
-    .trianglesRev::before {
+    .triangles_rev::before {
         left: -30px;
         bottom: -2px;
     }
 
-    .trianglesLightLeft::after {
+    .triangles_light_left::after {
         border-left: 66px solid var(--backlighter);
         border-bottom: 66px solid transparent;
         top: 9px;
         left: 9px;
     }
 
-    .trianglesLightRight::after {
+    .triangles_light_right::after {
         top: 9px;
         right: 9px;
         border-right: 66px solid var(--backlighter);
