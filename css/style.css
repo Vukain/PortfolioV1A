@@ -21,7 +21,7 @@ body {
     --middleColor: #60cd7e;
 
     --buttonBg: #b0b0b027;
-    --inputBg: #b0b0b0;
+    --inputBg: #fafafa;
     --changingFont: #ffffff;
     --whiteFont: #ffffff;
 
@@ -1210,7 +1210,6 @@ section {
 }
 
 body.light .contact button {
-
     border: 2px solid var(--mainColor2);
 }
 
