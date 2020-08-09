@@ -598,11 +598,11 @@ nav div.extras .imgor {
         margin: 6px auto;
     }
 
-    nav.active div.front div.ico>div:nth-child(1) {
+    nav:hover div.front div.ico>div:nth-child(1) {
         margin: 6px auto;
     }
 
-    nav.active div.front div.ico>div:nth-child(2) {
+    nav:hover div.front div.ico>div:nth-child(2) {
         margin: 6px auto;
     }
 }
@@ -637,11 +637,11 @@ nav div.extras .imgor {
         margin: 12px auto;
     }
 
-    nav.active div.front div.ico>div:nth-child(1) {
+    nav:hover div.front div.ico>div:nth-child(1) {
         margin: 12px auto;
     }
 
-    nav.active div.front div.ico>div:nth-child(2) {
+    nav:hover div.front div.ico>div:nth-child(2) {
         margin: 12px auto;
     }
 }
@@ -935,7 +935,7 @@ body.light .portfolio .web::before {
 
     100% {
         opacity: 1;
-        top: 14%;
+        top: 13%;
     }
 }
 
