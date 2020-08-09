@@ -44,7 +44,7 @@ body.light {
 
     --semiColor1: #fdad24;
     --semiColor2: #f77935;
-    --semiColor3: #f54d47;
+    --semiColor3: hsl(2, 89%, 64%);
 
     --middleColor: #e6822e;
 
