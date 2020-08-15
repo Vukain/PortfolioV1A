@@ -45,14 +45,14 @@ body.light {
     --semiColor1: #fdad24;
     --semiColor2: #f77935;
     /* --semiColor3: #f55751; */
-    /* --semiColor3: #f34c46; */
     --semiColor3: #f4514b;
 
 
     --middleColor: #e6822e;
 
     --inputBg: #ffffff;
-    --changingFont: #414140;
+    /* --changingFont: #414140; */
+    --changingFont: #3e3e3d;
 }
 
 /* font-family: 'Ubuntu', sans-serif; */
