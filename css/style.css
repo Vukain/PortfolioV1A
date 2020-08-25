@@ -770,7 +770,7 @@ nav div.extras .imgor {
     position: relative;
     z-index: 0;
     /* overflow: hidden; */
-    transition: transform .5s ease-out;
+    transition: transform .3s ease-in-out;
 }
 
 .portfolio .project:hover {
@@ -863,7 +863,7 @@ body.light .portfolio .web::before {
     height: 10vh;
     border-radius: 50%;
     background-color: var(--backDarker);
-    transition: 1s ease;
+    transition: .6s ease;
     transform: rotate(-45deg);
 }
 
@@ -878,7 +878,6 @@ body.light .portfolio .web::before {
     left: 0;
 }
 
-
 .portfolio .project .web:hover a div {
     width: 22vh;
     height: 22vh;
@@ -891,7 +890,7 @@ body.light .portfolio .web::before {
     font-size: 1.2em;
     color: var(--changingFont);
     text-decoration: none;
-    transition: opacity 1s .5s, color .3s;
+    transition: opacity .6s .3s, color .3s;
 }
 
 .portfolio .project .web a div:hover p {
@@ -1046,7 +1045,7 @@ section {
     border-radius: 20px;
     flex-grow: 1;
     color: var(--changingFont);
-    transition: .5s transform ease-out;
+    transition: .3s transform ease-in-out;
 }
 
 .skill:hover {
