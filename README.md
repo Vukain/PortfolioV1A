@@ -1,4 +1,4 @@
-# PortfolioV1
+# PortfolioV1A (combinator based vanilla css)
 
 Prototyping portfolio.
 Main principle was NOT to use any modern conventions (BEM, Sass) as a training. Pure CSS with combinators, vanilla JS.
